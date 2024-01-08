@@ -9,7 +9,7 @@ export const Header = () => {
 		<Box py={5}>
 			<Flex justifyContent='space-between'>
 				<Link to='/'>
-					<img src={assets.logo} alt="header logo" />
+					<img src={assets.avitoPlusLogo} alt="header logo" />
 				</Link>
 				<ButtonGroup gap={1}>
 					<OutlineButton text='Вход' />

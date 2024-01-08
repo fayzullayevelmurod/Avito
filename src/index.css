@@ -6,3 +6,30 @@ body {
 	max-width: 1280px;
 	margin: 0 auto;
 }
+
+/* colors */
+.purple {
+	color: #805AD5;
+}
+.bg-purple{
+	background-color: #805AD5;
+}
+
+/* buttons */
+.link-button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	border-radius: 6px;
+	background: #805AD5;
+	width: fit-content;
+	color: white !important;
+	text-decoration: none !important;
+	padding: 10px 24px;
+	font-weight: 600;
+	justify-content: center;
+	margin: 0 auto;
+}
+.link-button:hover{
+	background-color: #6B46C1;
+}

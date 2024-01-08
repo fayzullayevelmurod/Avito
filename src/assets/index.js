@@ -1,5 +1,11 @@
-import logo from './logo.svg'
+import avitoPlusLogo from './logos/avito-plus-ogo.svg'
+import avitoLogo from './logos/avito-logo.svg'
+import lightning from './icons/lightning-icon.svg'
+import upGreenIcon from './icons/up-green-icon.svg'
 
 export default {
-	logo,
+	avitoPlusLogo,
+	avitoLogo,
+	lightning,
+	upGreenIcon
 }
