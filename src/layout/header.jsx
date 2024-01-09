@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import assets from '../../assets';
+import assets from '../assets';
 import { Flex, ButtonGroup, Box } from '@chakra-ui/react'
-import { OutlineButton, RegularButton } from "../common";
-
-
+import { OutlineButton, RegularButton } from "../components/common";
+	
 export const Header = () => {
 	return (
 		<Box py={5}>

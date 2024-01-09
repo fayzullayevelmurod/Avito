@@ -4,6 +4,7 @@ import lightning from './icons/lightning-icon.svg'
 import upGreenIcon from './icons/up-green-icon.svg'
 import googleSheets from './logos/google-sheets-logo.svg'
 import plusBg from './logos/plus-bg.png'
+import avitoTitleIcon from './icons/favicon.ico'
 
 export default {
 	avitoPlusLogo,
@@ -11,5 +12,6 @@ export default {
 	lightning,
 	upGreenIcon,
 	googleSheets,
-	plusBg
+	plusBg,
+	avitoTitleIcon
 }

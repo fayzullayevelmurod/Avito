@@ -1,15 +1,23 @@
-import { Footer } from "./components/layout/footer"
-import { Header } from "./components/layout/header"
 import { Routes, Route } from 'react-router-dom'
-import { Home } from "./components/pages/home"
+import routes from "./router"
+
 export const App = () => {
 	return (
 		<div className="container">
-			<Header />
 			<Routes>
-				<Route path='/' element={<Home />} />
+				{routes.map((routes, index) => {
+					const { path, component: Component } = routes;
+					return (
+						<Route
+							key={index}
+							path={path}
+							element={
+								<Component />
+							}
+						/>
+					);
+				})}
 			</Routes>
-			<Footer />
 		</div>
 	)
 }
