@@ -1,7 +1,7 @@
 import { Flex, Text } from '@chakra-ui/react'
 
-export const Footer = () => {
-	return (
+export const Footer = () => (
+	<div className='container'>
 		<Flex justifyContent={'space-between'} fontSize='sm' color='gray.500'>
 			<Flex gap={14}>
 				<Text>@ 2024 Avito Plus - ИП Иванов Иван Иванович</Text>
@@ -12,5 +12,5 @@ export const Footer = () => {
 				<Text>Оферта</Text>
 			</Flex>
 		</Flex>
-	)
-}
+	</div>
+)

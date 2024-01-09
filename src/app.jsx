@@ -3,7 +3,7 @@ import routes from "./router"
 
 export const App = () => {
 	return (
-		<div className="container">
+		<>
 			<Routes>
 				{routes.map((routes, index) => {
 					const { path, component: Component } = routes;
@@ -18,6 +18,6 @@ export const App = () => {
 					);
 				})}
 			</Routes>
-		</div>
+		</>
 	)
 }

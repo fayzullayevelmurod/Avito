@@ -9,15 +9,22 @@ const boxPropery = {
 }
 
 export const Welcome = () => (
-	<Box style={boxPropery} px='40px' pt="64px" position='relative'>
+	<Box
+		style={boxPropery}
+		px='40px'
+		pt="64px"
+		position='relative'
+		mb='312px'
+		mt={5}
+	>
 		<Box pb='196px'>
-			<Box fontSize='7xl' fontWeight='700'>
+			<Box fontSize='7xl' fontWeight='700' lineHeight='110%'>
 				<Flex alignItems='center' justifyContent='center'>
 					Продвигай
 					<Image mx={4} src={assets.avitoLogo} alt="avito logo" style={{ display: 'inline-block' }} />
 					—
 				</Flex>
-				<Text textAlign={'center'}>
+				<Text textAlign='center' lineHeight='150%'>
 					Управляй объявлениями
 				</Text>
 			</Box>
@@ -25,14 +32,37 @@ export const Welcome = () => (
 				Используйте Google Таблицы для управления Avito аккаунтами.
 				Добавляйте, клонируйте и редактируйте объявления в пару кликов.
 			</Text>
-			<Link className='link-button'>
-				<Image src={assets.lightning} alt="liglightning icon" display={'inline-block'} />
-				Начните сейчас
-			</Link>
+			<Flex
+				justifyContent='center'
+				>
+				<Link className='link-button'>
+					<Image src={assets.lightning} alt="liglightning icon" display={'inline-block'} />
+					Начните сейчас
+				</Link>
+			</Flex>
 		</Box>
-		<Flex justifyContent='space-between' gap='40px' position='absolute' width='100%' left='0' bottom={0}>
-			<Box className='avito-plus__card' backgroundColor={'white'} borderRadius={32} p='40px'>
-				<Text fontSize='4xl' fontWeight='700'>Получайте больше заявок <br />
+		<Flex
+			justifyContent='space-between'
+			gap='40px'
+			position='absolute'
+			width='100%'
+			left='0'
+			bottom='-175px'
+			px='96px'
+		>
+			<Box
+				className='avito-plus__card'
+				backgroundColor='white'
+				borderRadius={32} p='40px'
+				maxWidth='667px'
+				width='100%'
+				boxShadow='-40px 40px 80px 0px rgba(145, 158, 171, 0.16), 0px 0px 2px 0px rgba(145, 158, 171, 0.20)'
+			>
+				<Text
+					fontSize='4xl'
+					fontWeight='700'
+					lineHeight='120%'
+				>Получайте больше заявок <br />
 					— используя <span className='purple'>Avito Plus</span> </Text>
 				<Flex gap={3} mt={6}>
 					<Box className="avito-plus__statistics" fontSize={'sm'} backgroundColor={'#FAFAFA'} p={3} borderRadius={12} maxWidth={137} width='100%' color='#2D3748'>
@@ -69,14 +99,23 @@ export const Welcome = () => (
 					</Box>
 				</Flex>
 			</Box>
-			<Box maxW='380px' bgImage={assets.plusBg} bgColor='#805AD5' p='40px' color='white' textAlign='center' borderRadius={32}>
+			<Box
+				maxW='380px'
+				width='100%'
+				bgImage={assets.plusBg}
+				bgColor='purple.500'
+				p='40px'
+				color='white'
+				textAlign='center'
+				borderRadius={32}
+			>
 				<Box bgColor='white' borderRadius={12} py={5} px={8}>
 					<Image mx='auto' src={assets.googleSheets} alt="google sheets full logo" />
 				</Box>
 				<Text fontSize='28px' fontWeight={600} mt={6}>
 					10.000+ объявлений
 				</Text>
-				<Text >
+				<Text lineHeight='150%'>
 					Через Google Таблицы вы можете выкладывать и легко контролировать тысячи объявлений
 				</Text>
 			</Box>
