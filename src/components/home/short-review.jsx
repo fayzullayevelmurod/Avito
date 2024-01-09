@@ -56,7 +56,7 @@ export const ShortReview = () => {
 					</Link>
 				</Flex>
 			</Box>
-			<Box
+			{/* <Box
 				bgImage={{ base: 'unset', md: "url('https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2023/08/n-up-news-starter-uma.jpg?resize=1024,576')" }}
 				bgSize='cover'
 				bgPosition='center'
@@ -80,6 +80,9 @@ export const ShortReview = () => {
 						/>
 					</AspectRatio>
 				</Box>
+			</Box> */}
+			<Box>
+				<Image src={assets.shortReview} />
 			</Box>
 		</Flex>
 	)

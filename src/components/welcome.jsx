@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Text, Flex, Image, Link } from '@chakra-ui/react';
+import { Box, Text, Flex, Image } from '@chakra-ui/react';
 import assets from '../assets';
+import { Link } from 'react-router-dom';
 
 const boxPropery = {
 	backgroundColor: '#FAFAFA',
@@ -34,8 +35,8 @@ export const Welcome = () => (
 			</Text>
 			<Flex
 				justifyContent='center'
-				>
-				<Link className='link-button'>
+			>
+				<Link to='#!' className='link-button'>
 					<Image src={assets.lightning} alt="liglightning icon" display={'inline-block'} />
 					Начните сейчас
 				</Link>

@@ -4,7 +4,7 @@ const Home = lazy(() => import('../pages/home'));
 
 const coreRoutes = [
 	{
-		path: '/home',
+		path: '/',
 		component: Home,
 	},
 	{

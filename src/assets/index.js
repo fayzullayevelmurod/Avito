@@ -9,6 +9,17 @@ import airpordsGroup from './airpords-group-cards.png'
 import statistics from './statistiks.png'
 import allFolders from './all-folders.png'
 import settingsIcon from './settings-icon.png'
+import fullGoogleSheet from './fuulGoogleSheets.png'
+import avitoPlusBg from './avito-plus-bg.png'
+import avitoReklama from './avito-reklama.png'
+import groupRadius from './group-radius.png'
+import shortReview from './short-rewiev.png'
+import starsGroup from './icons/stars-group.svg'
+import raketaIcon from './icons/raketa-icon.svg'
+import fireIcon from './icons/fire-icon.svg'
+import lampIcon from  './icons/lamp-icon1.svg'
+import fastIcon from './icons/fast-icon.svg'
+
 
 export default {
 	avitoPlusLogo,
@@ -21,5 +32,15 @@ export default {
 	airpordsGroup,
 	statistics,
 	allFolders,
-	settingsIcon
+	settingsIcon,
+	fullGoogleSheet,
+	avitoReklama,
+	avitoPlusBg,
+	groupRadius,
+	shortReview,
+	fastIcon,
+	lampIcon,
+	fireIcon,
+	raketaIcon,
+	starsGroup
 }

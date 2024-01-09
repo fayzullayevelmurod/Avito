@@ -7,6 +7,7 @@ import {
 } from '@chakra-ui/react';
 import { OutlineButton } from '../common';
 import assets from '../../assets';
+import { Link } from 'react-router-dom';
 
 export const AvitoServices = () => (
 	<Box mb='144px'>
@@ -38,7 +39,7 @@ export const AvitoServices = () => (
 					lineHeight='120%'
 				// width='343px'
 				>
-					Сделайте из 100 шт  -> <span className='purple'>1000 шт</span>
+					Сделайте из 100 шт  -{'>'} <span className='purple'>1000 шт</span>
 				</Heading>
 				<Text
 					my='16px'
@@ -47,7 +48,9 @@ export const AvitoServices = () => (
 				>
 					Используйте встроенную функцию рандомизатора, что бы создать уникальные копии объявлений
 				</Text>
-				<OutlineButton text='Рандомизатор' />
+				<Link className='outline-link-button' to='#!'>
+					Рандомизатор
+				</Link>
 				<Box
 					position='absolute'
 					bottom={0}
@@ -63,6 +66,7 @@ export const AvitoServices = () => (
 				borderRadius={32}
 				height='600px'
 				position='relative'
+				zIndex={1}
 			>
 				<Heading
 					color='#171923'
@@ -82,11 +86,15 @@ export const AvitoServices = () => (
 				>
 					Используйте разное время публикации, разные станции метро и адреса, отслеживайте статистику и включайте рекламу — Все это не покидая таблицы.
 				</Text>
-				<OutlineButton text='База знаний Avito Plus' />
+				<Link className='outline-link-button' to='#!'>
+					База знаний Avito Plus
+				</Link>
 				<Box
 					position='absolute'
 					bottom='0'
 					right='78px'
+					zIndex={-1}
+
 				>
 					<Image src={assets.statistics} alt='airports group' />
 				</Box>
@@ -112,7 +120,7 @@ export const AvitoServices = () => (
 					fontWeight='700'
 					lineHeight='120%'
 				>
-					Удобная работа с фото -> <span className='purple'>Яндекс Диск</span>
+					Удобная работа с фото -{'>'} <span className='purple'>Яндекс Диск</span>
 				</Heading>
 				<Text
 					my='16px'
@@ -122,13 +130,15 @@ export const AvitoServices = () => (
 				>
 					Загрузите фотографии по папкам, вставьте названия папок в таблицу, фотографии сами подгрузятся на Авито.
 				</Text>
-				<OutlineButton text='Яндекс Диск' />
+				<Link to='#!' className='outline-link-button'>
+					Яндекс Диск
+				</Link>
 				<Box
 					position='absolute'
 					bottom='0'
 					left={0}
 				>
-					<Image src={assets.allFolders} alt='airports group' style={{borderBottomLeftRadius: '32px'}} />
+					<Image src={assets.allFolders} alt='airports group' style={{ borderBottomLeftRadius: '32px' }} />
 				</Box>
 			</Box>
 			<Box
@@ -147,16 +157,18 @@ export const AvitoServices = () => (
 					fontWeight='700'
 					lineHeight='120%'
 				>
-					Автоматизация 
+					Автоматизация
 				</Heading>
 				<Text
 					my='16px'
 					color='#2D3748'
 					lineHeight='150%'
 				>
-					Экономьте время, используйте встроенную функцию рандомизатора, 
+					Экономьте время, используйте встроенную функцию рандомизатора,
 				</Text>
-				<OutlineButton text='Автоматизация' />
+				<Link to='#!' className='outline-link-button'>
+					Автоматизация
+				</Link>
 				<Box
 					position='absolute'
 					bottom={0}
