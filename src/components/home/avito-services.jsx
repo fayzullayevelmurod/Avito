@@ -5,7 +5,6 @@ import {
 	Text,
 	Image
 } from '@chakra-ui/react';
-import { OutlineButton } from '../common';
 import assets from '../../assets';
 import { Link } from 'react-router-dom';
 

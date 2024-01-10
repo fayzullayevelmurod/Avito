@@ -29,10 +29,13 @@ export const ShortReview = () => {
 			direction={{ base: 'column-reverse', md: 'row' }}
 			justify={{ base: 'center', md: 'space-between' }}
 			align='center'
-			py='50px'
+			pt='50px'
+			mb='144px'
 			gap='50px'
 		>
-			<Box maxW='565px'>
+			<Box
+				maxW='565px'
+			>
 				<Heading
 					lineHeight='120%'
 					fontWeight='700'
@@ -81,7 +84,7 @@ export const ShortReview = () => {
 					<Image src={assets.playIcon} />
 				</Box>
 			</Box>
-			<VideoModal onClose={onClose} isOpen={isOpen} /> 
+			<VideoModal onClose={onClose} isOpen={isOpen} />
 		</Flex>
 	)
 }

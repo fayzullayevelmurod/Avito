@@ -10,12 +10,25 @@ const theme = extendTheme({
 		body: "Inter, sans-serif",
 		heading: "Inter, sans-serif",
 	},
-	fontWeights: {
-		normal: 400,
-		medium: 500,
-		bold: 700,
+	Heading: {
+		// baseStyle: {
+		// 	color: 'black.500',
+		// 	fontWeight: 'bold',
+		// 	fontSize: '2xl',
+		// },
+		fontSize: {
+			10: '300px'
+		}
+	},
+	colors: {
+		black: {
+			100: '#171923',
+			500: 'red',
+		},
 	},
 });
+
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

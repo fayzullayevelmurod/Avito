@@ -504,6 +504,7 @@ export const Subscription = () => (
 				p='40px'
 				borderRadius={32}
 				bgImage={assets.subScripImg}
+				bgSize='100% 100%'
 				bgPosition='top right'
 				bgRepeat='no-repeat'
 			>
