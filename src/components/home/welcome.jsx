@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Text, Flex, Image } from '@chakra-ui/react';
-import assets from '../assets';
+import assets from '../../assets';
 import { Link } from 'react-router-dom';
 
 const boxPropery = {

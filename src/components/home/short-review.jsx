@@ -6,19 +6,23 @@ import {
 	Text,
 	Image,
 	useDisclosure,
-	Modal,
-	ModalOverlay,
-	ModalContent,
-	ModalCloseButton,
-	ModalBody,
-	AspectRatio
+	// Modal,
+	// ModalOverlay,
+	// ModalContent,
+	// ModalCloseButton,
+	// ModalBody,
+	// AspectRatio
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import assets from '../../assets';
+import { VideoModal } from '../modal/modal';
 
 
 export const ShortReview = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
+	const handleOpenModal = () => {
+		onOpen();
+	};
 
 	return (
 		<Flex
@@ -72,37 +76,12 @@ export const ShortReview = () => {
 					left='50%'
 					transform='translate(-50%)'
 					cursor='pointer'
-					onClick={onOpen}
+					onClick={handleOpenModal}
 				>
 					<Image src={assets.playIcon} />
 				</Box>
 			</Box>
-			< Modal onClose={onClose} isOpen={isOpen} isCentered>
-				<ModalOverlay />
-				<ModalContent 
-				maxW='600px'
-					width='100%'>
-					<ModalCloseButton />
-					<ModalBody>
-						<Box pt={{ base: '0px', md: '50px', lg: '0px' }}>
-							<AspectRatio
-								h={{ base: '270px', md: '250px', lg: '332px' }}
-								mt={{ base: '0px', md: '60px' }}
-								mb={{ base: '0px', md: '40px' }}
-								ml='auto'
-							>
-								<iframe
-									width='100%'
-									height='100%'
-									style={{ borderRadius: '20px' }}
-									src='https://www.youtube.com/embed/vhnFVeRGlCc?si=srdoZ6H0Ng8iXYOT'
-								/>
-							</AspectRatio>
-						</Box>
-
-					</ModalBody>
-				</ModalContent>
-			</ Modal>
+			<VideoModal onClose={onClose} isOpen={isOpen} /> 
 		</Flex>
 	)
 }
