@@ -15,10 +15,10 @@ const Home = () => {
 				<AvitoServices />
 			</div>
 			<AvitoPlus />
-			{/* <div className='container'>
+			<div className='container'>
 				<Subscription />
 			</div>
-			<Footer /> */}
+			<Footer />
 		</>
 	)
 }

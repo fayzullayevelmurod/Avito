@@ -74,12 +74,24 @@ body {
 		padding-right: 20px;
 	}
 }
+
 @media screen and (max-width: 480px) {
+
 	.link-button,
 	.outline-link-button {
 		font-size: 14px !important;
 	}
-	.media-full{
+
+	.media-full {
 		width: 100%;
 	}
+
+	.subscription-section .outline-link-button,
+	.subscription-section .link-button {
+		width: 100% !important;
+	}
+}
+
+td {
+	padding: 0 !important;
 }

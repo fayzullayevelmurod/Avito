@@ -17,6 +17,11 @@ export const AvitoPlus = () => (
 		bgColor='#FAFAFA'
 		py='144px'
 		mb='144px'
+		sx={{
+			"@media (max-width:500px)": {
+				mb: '80px'
+			}
+		}}
 	>
 		<div className='container'>
 			<Heading
@@ -430,8 +435,8 @@ export const AvitoPlus = () => (
 							transform: 'rotate(39deg)',
 							right: '-146px',
 							bottom: '-138px',
-							width:'97%',
-							height:'66%'
+							width: '97%',
+							height: '66%'
 						},
 						// 39deg,-72px,-36%
 
