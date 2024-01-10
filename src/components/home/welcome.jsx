@@ -65,7 +65,7 @@ export const Welcome = () => (
 				justifyContent='center'
 				className='media-mb'
 			>
-				<Link to='#!' className='link-button'>
+				<Link to='#!' className='link-button media-full'>
 					<Image src={assets.lightning} alt="liglightning icon" display={'inline-block'} />
 					Начните сейчас
 				</Link>

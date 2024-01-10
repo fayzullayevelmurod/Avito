@@ -32,16 +32,45 @@ export const ShortReview = () => {
 			pt='50px'
 			mb='144px'
 			gap='50px'
+			sx={{
+				"@media (max-width: 992px)": {
+					gap: '20px'
+				},
+				"@media (max-width: 768px)": {
+					flexDirection: 'column',
+					mt: '421px',
+					gap: '36px'
+				}
+			}}
 		>
 			<Box
 				maxW='565px'
+				sx={{
+					"@media (max-width: 1300px)": {
+						maxWidth: '440px'
+					},
+					"@media (max-width: 992px)": {
+						maxWidth: '335px'
+					},
+					"@media (max-width: 768px)": {
+						maxWidth: '100%'
+					}
+				}}
 			>
 				<Heading
 					lineHeight='120%'
 					fontWeight='700'
-					textAlign={{ base: 'center', md: 'unset' }}
+					textAlign='left'
 					fontSize='48px'
 					color='#171923'
+					sx={{
+						"@media (max-width: 1000px)": {
+							fontSize: '40px'
+						},
+						"@media (max-width: 480px)": {
+							fontSize: '22px'
+						},
+					}}
 				>
 					Краткий обзор <br />
 					<Box as='span' color='purple.500'>
@@ -49,11 +78,18 @@ export const ShortReview = () => {
 					</Box>
 				</Heading>
 				<Text
-					textAlign={{ base: 'center', md: 'unset' }}
+					textAlign='left'
 					fontSize='18px'
 					mt='32px'
 					mb='56px'
 					lineHeight='150%'
+					sx={{
+						"@media (max-width: 480px)": {
+							mt: '16px',
+							mb: '24px',
+							fontSize: '15px',
+						}
+					}}
 				>
 					Используйте разное время публикации, разные станции метро и адреса, отслеживайте статистику и включайте рекламу —
 					<span style={{ fontWeight: '600', color: '#805ad5' }}>Это все не покидая таблицы.</span>
@@ -61,10 +97,10 @@ export const ShortReview = () => {
 				<Flex
 					gap={{ base: '10px', md: '30px' }}
 					flexWrap='wrap'
-					justify={{ base: 'center', md: 'flex-start' }}
+					justify='start'
 				>
 					<Link
-						className='link-button'
+						className='link-button media-full'
 					>
 						<Image src={assets?.lightning} alt="liglightning icon" display={'inline-block'} />
 						Начните сейчас
@@ -85,6 +121,6 @@ export const ShortReview = () => {
 				</Box>
 			</Box>
 			<VideoModal onClose={onClose} isOpen={isOpen} />
-		</Flex>
+		</Flex >
 	)
 }

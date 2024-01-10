@@ -12,7 +12,7 @@ const Home = () => {
 			<div className='container'>
 				<Welcome />
 				<ShortReview />
-				{/* <AvitoServices /> */}
+				<AvitoServices />
 			</div>
 			{/* <AvitoPlus />
 			<div className='container'>
