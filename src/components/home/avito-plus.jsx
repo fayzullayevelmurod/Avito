@@ -40,6 +40,7 @@ export const AvitoPlus = () => (
 						p={8}
 						height='467px'
 						position='relative'
+						overflow='hidden'
 					>
 						<Heading
 							fontSize='24px'
