@@ -1,17 +1,25 @@
 import React from 'react';
 import {
-	Button,
-	AspectRatio,
 	Box,
 	Flex,
 	Heading,
 	Text,
-	Image
+	Image,
+	useDisclosure,
+	Modal,
+	ModalOverlay,
+	ModalContent,
+	ModalCloseButton,
+	ModalBody,
+	AspectRatio
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import assets from '../../assets';
 
+
 export const ShortReview = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure()
+
 	return (
 		<Flex
 			direction={{ base: 'column-reverse', md: 'row' }}
@@ -56,34 +64,45 @@ export const ShortReview = () => {
 					</Link>
 				</Flex>
 			</Box>
-			{/* <Box
-				bgImage={{ base: 'unset', md: "url('https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2023/08/n-up-news-starter-uma.jpg?resize=1024,576')" }}
-				bgSize='cover'
-				bgPosition='center'
-				bgRepeat='no-repeat'
-				w='100%'
-				h={{ base: 'unset', md: '535px' }}
-			>
-				<Box pt={{ base: '0px', md: '50px', lg: '0px' }}>
-					<AspectRatio
-						maxW='459px'
-						h={{ base: '270px', md: '250px', lg: '332px' }}
-						mt={{ base: '0px', md: '100px' }}
-						mr={{ base: 'auto', md: '20px' }}
-						ml='auto'
-					>
-						<iframe
-							width='100%'
-							height='100%'
-							style={{ borderRadius: '20px' }}
-							src='https://www.youtube.com/embed/vhnFVeRGlCc?si=srdoZ6H0Ng8iXYOT'
-						/>
-					</AspectRatio>
-				</Box>
-			</Box> */}
-			<Box>
+			<Box position='relative'>
 				<Image src={assets.shortReview} />
+				<Box
+					position='absolute'
+					top='50%'
+					left='50%'
+					transform='translate(-50%)'
+					cursor='pointer'
+					onClick={onOpen}
+				>
+					<Image src={assets.playIcon} />
+				</Box>
 			</Box>
+			< Modal onClose={onClose} isOpen={isOpen} isCentered>
+				<ModalOverlay />
+				<ModalContent 
+				maxW='600px'
+					width='100%'>
+					<ModalCloseButton />
+					<ModalBody>
+						<Box pt={{ base: '0px', md: '50px', lg: '0px' }}>
+							<AspectRatio
+								h={{ base: '270px', md: '250px', lg: '332px' }}
+								mt={{ base: '0px', md: '60px' }}
+								mb={{ base: '0px', md: '40px' }}
+								ml='auto'
+							>
+								<iframe
+									width='100%'
+									height='100%'
+									style={{ borderRadius: '20px' }}
+									src='https://www.youtube.com/embed/vhnFVeRGlCc?si=srdoZ6H0Ng8iXYOT'
+								/>
+							</AspectRatio>
+						</Box>
+
+					</ModalBody>
+				</ModalContent>
+			</ Modal>
 		</Flex>
 	)
 }

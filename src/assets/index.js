@@ -21,6 +21,7 @@ import lampIcon from  './icons/lamp-icon1.svg'
 import fastIcon from './icons/fast-icon.svg'
 import subScripImg from './subscripbe-box-bg.png'
 import ballon from './balon.png'
+import playIcon from './icons/play-icon.svg'
 
 export default {
 	avitoPlusLogo,
@@ -45,5 +46,6 @@ export default {
 	raketaIcon,
 	starsGroup,
 	subScripImg,
-	ballon
+	ballon,
+	playIcon
 }
