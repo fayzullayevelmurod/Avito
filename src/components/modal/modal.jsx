@@ -20,7 +20,7 @@ export const VideoModal = ({isOpen, onOpen, onClose }) => {
 						<Box pt={{ base: '0px', md: '50px', lg: '0px' }}>
 							<AspectRatio
 								h={{ base: '270px', md: '250px', lg: '332px' }}
-								mt={{ base: '0px', md: '60px' }}
+								mt={{ base: '40px', md: '0px'}}
 								mb={{ base: '0px', md: '40px' }}
 								ml='auto'
 							>

@@ -22,6 +22,7 @@ import fastIcon from './icons/fast-icon.svg'
 import subScripImg from './media/subscripbe-box-bg.png'
 import ballon from './media/balon.png'
 import playIcon from './icons/play-icon.svg'
+import mediaRadiusBg from './media/media-radius.png'
 
 export default {
 	avitoPlusLogo,
@@ -47,5 +48,6 @@ export default {
 	starsGroup,
 	subScripImg,
 	ballon,
-	playIcon
+	playIcon,
+	mediaRadiusBg
 }

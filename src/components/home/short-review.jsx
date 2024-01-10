@@ -39,7 +39,8 @@ export const ShortReview = () => {
 				"@media (max-width: 768px)": {
 					flexDirection: 'column',
 					mt: '421px',
-					gap: '36px'
+					gap: '36px',
+					mb: '80px'
 				}
 			}}
 		>
@@ -111,7 +112,7 @@ export const ShortReview = () => {
 				<Image src={assets.shortReview} />
 				<Box
 					position='absolute'
-					top='50%'
+					top='40%'
 					left='50%'
 					transform='translate(-50%)'
 					cursor='pointer'

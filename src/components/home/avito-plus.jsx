@@ -20,11 +20,11 @@ export const AvitoPlus = () => (
 	>
 		<div className='container'>
 			<Heading
-				fontSize='48px'
 				fontWeight='700'
 				lineHeight='120%'
-				mb='44px'
 				textAlign='center'
+				fontSize={{ base: '22px', sm: '35px', md: '40px', lg: '48px' }}
+				mb={{ base: '20px', sm: '40px', md: '44px', lg: '44px' }}
 			>
 				Как работает — <span className='purple'>Avito Plus?</span>
 			</Heading>
@@ -32,28 +32,52 @@ export const AvitoPlus = () => (
 			<Grid
 				templateColumns='repeat(3, 1fr)'
 				gap={8}
+				sx={{
+					"@media (max-width:1000px)": {
+						display: "flex",
+						flexWrap: 'wrap',
+						gap: '30px'
+					}
+				}}
 			>
-				<GridItem>
+				<GridItem
+					sx={{
+						"@media (max-width:1000px)": {
+							width: '48%'
+						},
+						"@media (max-width:790px)": {
+							width: '100%'
+						},
+					}}
+				>
 					<Box
 						borderRadius={32}
 						bgColor='#fff'
 						p={8}
+						sx={{
+							"@media (max-width:480px)": {
+								p: '16px'
+							},
+							"@media (max-width:480px)": {
+								height: '320px'
+							}
+						}}
 						height='467px'
 						position='relative'
 						overflow='hidden'
 					>
 						<Heading
-							fontSize='24px'
+							fontSize={{ base: '20px', md: '24px', lg: '24px' }}
 							color='#171923'
 						>
 							Редактируйте
 							Google Таблицу
 						</Heading>
 						<Text
-							fontSize='18px'
+							fontSize={{ base: '15px', md: '18px', lg: '18px' }}
 							color='#2D3748'
 							lineHeight='150%'
-							mt={4}
+							mt={{ base: '12px', md: 4, lg: 4 }}
 						>
 							Одна строка в таблице, <br />
 							равна одному объявлению
@@ -62,6 +86,13 @@ export const AvitoPlus = () => (
 							position='absolute'
 							bottom={0}
 							right={0}
+							sx={{
+								"@media (max-width:480px)": {
+									height: '266px',
+									width: '300px',
+									bottom: 'auto',
+								}
+							}}
 						>
 							<Image src={assets.fullGoogleSheet} />
 						</Box>
@@ -69,7 +100,7 @@ export const AvitoPlus = () => (
 				</GridItem>
 				<GridItem
 					bgImage={`url(${assets.avitoPlusBg})`}
-					bgColor='purple.500'
+					bgColor='#6549aa'
 					bgRepeat='no-repeat'
 					bgSize='100% 100%'
 					borderRadius={32}
@@ -79,14 +110,27 @@ export const AvitoPlus = () => (
 					textAlign='center'
 					px='40px'
 					boxShadow='-20px 20px 62.8px -15px rgba(128, 90, 213, 0.40)'
+					sx={{
+						"@media (max-width:1000px)": {
+							width: '100%',
+							order: '1',
+							height: '180px',
+							bgSize: '100% 280%'
+						}
+					}}
 				>
 					<Text
 						fontSize='28px'
 						fontWeight='800'
 						lineHeight='120%'
 						color='white'
+						sx={{
+							"@media (max-width:480px)": {
+								fontSize: "24px"
+							}
+						}}
 					>
-						Выгрузка на Авито
+						Выгрузка на Авито <br />
 						раз в 60 минут
 					</Text>
 				</GridItem>
@@ -96,18 +140,31 @@ export const AvitoPlus = () => (
 					p={8}
 					height='467px'
 					position='relative'
+					sx={{
+						"@media (max-width:1000px)": {
+							width: '48%'
+						},
+						"@media (max-width:790px)": {
+							width: '100%'
+						},
+						"@media (max-width:480px)": {
+							height: '320px',
+							p: '20px'
+						}
+					}}
 				>
 					<Heading
-						fontSize='24px'
+						fontSize={{ base: '20px', md: '24px', lg: '24px' }}
 						color='#171923'
 					>
 						Авито публикует объявления
 					</Heading>
 					<Text
-						fontSize='18px'
+						fontSize={{ base: '15px', md: '18px', lg: '18px' }}
 						color='#2D3748'
 						lineHeight='150%'
-						mt={4}
+						mt={{ base: '12px', md: 4, lg: 4 }}
+						mb='16px'
 					>
 						Если в объявлении ошибка — мы отобразим ее в таблице рядом с объявлением
 					</Text>
@@ -116,6 +173,11 @@ export const AvitoPlus = () => (
 						bottom="50px"
 						left='50%'
 						transform='translateX(-50%)'
+						sx={{
+							"@media (max-width:480px)": {
+								bottom: '38px'
+							}
+						}}
 					>
 						<Image src={assets.avitoReklama} />
 					</Box>
@@ -133,8 +195,27 @@ export const AvitoPlus = () => (
 				overflow='hidden'
 				zIndex='1'
 			>
-				<Flex>
-					<Box maxWidth='580px' width='100%'>
+				<Flex
+					justifyContent='space-between'
+					sx={{
+						"@media (max-width:800px)": {
+							flexWrap: 'wrap',
+						}
+					}}
+				>
+					<Box
+						maxWidth='580px'
+						width='100%'
+						sx={{
+							"@media (max-width:1000px)": {
+								maxWidth: '405px'
+							},
+							"@media (max-width:800px)": {
+								mb: '41px',
+								maxWidth: '100%'
+							}
+						}}
+					>
 						<Heading
 							fontSize='24px'
 							fontWeight={700}
@@ -152,7 +233,13 @@ export const AvitoPlus = () => (
 						<Link to='#!' className='outline-link-button outline'>Яндекс Диск</Link>
 					</Box>
 					<Box>
-						<Flex>
+						<Flex
+							sx={{
+								"@media (max-width:1300px)": {
+									gap: '20px'
+								}
+							}}
+						>
 							<Box
 								className="avito-plus__statistics"
 								fontSize={'sm'}
@@ -165,9 +252,33 @@ export const AvitoPlus = () => (
 								position='absolute'
 								top='22px'
 								right='330px'
+								sx={{
+									"@media (max-width:1300px)": {
+										right: '20px',
+										position: 'initial',
+										height: '104px',
+										mt: '-15px'
+									},
+									"@media (max-width:480px)": {
+										padding: '10px',
+										width: '154px',
+										height: '80px'
+									},
+								}}
 							>
-								<Text fontWeight={500}>Просмотры за 7 дней</Text>
-								<Text fontSize='2xl' fontWeight={600} py={1}>👀 783</Text>
+								<Text
+									fontWeight={500}
+									sx={{
+										"@media (max-width:480px)": {
+											fontSize: '10px'
+										},
+									}}
+								>Просмотры за 7 дней</Text>
+								<Text
+									fontSize={{ base: '18px', md: '2xl', lg: '2xl' }}
+									fontWeight={600}
+									py={{ base: 0, md: 1, lg: 1 }}
+								>👀 783</Text>
 								<Flex gap={1}>
 									<Image src={assets.upGreenIcon} alt="up green icon" />
 									<Text opacity={0.8}>87.09%</Text>
@@ -182,16 +293,44 @@ export const AvitoPlus = () => (
 								position='absolute'
 								top='40px'
 								right='105px'
+								sx={{
+									"@media (max-width:1300px)": {
+										right: '20px',
+										position: 'initial',
+										height: '104px'
+									},
+									"@media (max-width:480px)": {
+										padding: '10px',
+										width: '154px',
+										height: '80px'
+									},
+								}}
 							>
-								<Text fontWeight={500}>Сообщения сегодня</Text>
-								<Text fontSize='2xl' fontWeight={600} py={1}>💬 12</Text>
+								<Text fontWeight={500}
+									sx={{
+										"@media (max-width:480px)": {
+											fontSize: '10px'
+										},
+									}}
+								>Сообщения сегодня</Text>
+								<Text
+									fontSize={{ base: '18px', md: '2xl', lg: '2xl' }}
+									fontWeight={600}
+									py={{ base: 0, md: 1, lg: 1 }}
+								>💬 12</Text>
 								<Flex gap={1}>
 									<Image src={assets.upGreenIcon} alt="up green icon" />
 									<Text opacity={0.8}>79.48%</Text>
 								</Flex>
 							</Box>
 						</Flex>
-						<Flex>
+						<Flex
+							sx={{
+								"@media (max-width:1300px)": {
+									gap: '20px'
+								}
+							}}
+						>
 							<Box className="avito-plus__statistics" fontSize={'sm'} backgroundColor={'#fff'}
 								p={3}
 								borderRadius={12}
@@ -201,9 +340,33 @@ export const AvitoPlus = () => (
 								position='absolute'
 								top='150px'
 								right='318px'
+								sx={{
+									"@media (max-width:1300px)": {
+										right: '20px',
+										position: 'initial',
+										height: '104px',
+										mt: '10px',
+										ml: '15px'
+									},
+									"@media (max-width:480px)": {
+										padding: '10px',
+										width: '154px',
+										height: '80px'
+									},
+								}}
 							>
-								<Text fontWeight={500}>Конверсия за 30 дней</Text>
-								<Text fontSize='2xl' fontWeight={600} py={1}>🔥 23%</Text>
+								<Text fontWeight={500}
+									sx={{
+										"@media (max-width:480px)": {
+											fontSize: '10px'
+										},
+									}}
+								>Конверсия за 30 дней</Text>
+								<Text
+									fontSize={{ base: '18px', md: '2xl', lg: '2xl' }}
+									fontWeight={600}
+									py={{ base: 0, md: 1, lg: 1 }}
+								>🔥 23%</Text>
 								<Flex gap={1}>
 									<Image src={assets.upGreenIcon} alt="up green icon" />
 									<Text opacity={0.8}>65.31%</Text>
@@ -218,9 +381,32 @@ export const AvitoPlus = () => (
 								position='absolute'
 								top='167px'
 								right='95px'
+								sx={{
+									"@media (max-width:1300px)": {
+										right: '20px',
+										position: 'initial',
+										height: '104px',
+										mt: '15px',
+									},
+									"@media (max-width:480px)": {
+										padding: '10px',
+										width: '154px',
+										height: '80px'
+									},
+								}}
 							>
-								<Text fontWeight={500}>Избранное за 7 дней</Text>
-								<Text fontSize='2xl' fontWeight={600} py={1}>💜 45</Text>
+								<Text fontWeight={500}
+									sx={{
+										"@media (max-width:480px)": {
+											fontSize: '10px'
+										},
+									}}
+								>Избранное за 7 дней</Text>
+								<Text
+									fontSize={{ base: '18px', md: '2xl', lg: '2xl' }}
+									fontWeight={600}
+									py={{ base: 0, md: 1, lg: 1 }}
+								>💜 45</Text>
 								<Flex gap={1}>
 									<Image src={assets.upGreenIcon} alt="up green icon" />
 									<Text opacity={0.8}>55.44%</Text>
@@ -236,6 +422,20 @@ export const AvitoPlus = () => (
 					bottom='0'
 					width='43%'
 					zIndex='-1'
+					sx={{
+						"@media (max-width:800px)": {
+							width: '75%'
+						},
+						"@media (max-width:800px)": {
+							transform: 'rotate(39deg)',
+							right: '-146px',
+							bottom: '-138px',
+							width:'97%',
+							height:'66%'
+						},
+						// 39deg,-72px,-36%
+
+					}}
 				>
 					<Image src={assets.groupRadius} style={{ width: '100%', height: '100%' }} />
 				</Box>

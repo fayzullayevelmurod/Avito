@@ -14,8 +14,8 @@ const Home = () => {
 				<ShortReview />
 				<AvitoServices />
 			</div>
-			{/* <AvitoPlus />
-			<div className='container'>
+			<AvitoPlus />
+			{/* <div className='container'>
 				<Subscription />
 			</div>
 			<Footer /> */}
