@@ -10,22 +10,6 @@ const theme = extendTheme({
 		body: "Inter, sans-serif",
 		heading: "Inter, sans-serif",
 	},
-	Heading: {
-		// baseStyle: {
-		// 	color: 'black.500',
-		// 	fontWeight: 'bold',
-		// 	fontSize: '2xl',
-		// },
-		fontSize: {
-			10: '300px'
-		}
-	},
-	colors: {
-		black: {
-			100: '#171923',
-			500: 'red',
-		},
-	},
 });
 
 

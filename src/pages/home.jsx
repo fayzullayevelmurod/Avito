@@ -5,7 +5,7 @@ import { Subscription } from '../components/home/subscription';
 import { Welcome } from '../components/home/welcome';
 import { Footer, Header } from '../layout';
 
-const Home = () => {
+export const Home = () => {
 	return (
 		<>
 			<Header />
@@ -22,4 +22,3 @@ const Home = () => {
 		</>
 	)
 }
-export default Home

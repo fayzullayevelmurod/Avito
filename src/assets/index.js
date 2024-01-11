@@ -26,6 +26,7 @@ import mediaRadiusBg from './media/media-radius.png'
 import mediaGoogleSheet from './media/mediaGoogleSheet.png'
 import yandexIcon from './icons/yandex-icon.svg'
 import yandexAvitoIcon from './icons/yande-avito-icon.png'
+import telegramIcon from './icons/telegram-icon.png'
 
 export default {
 	avitoPlusLogo,
@@ -55,5 +56,6 @@ export default {
 	mediaRadiusBg,
 	mediaGoogleSheet,
 	yandexIcon,
-	yandexAvitoIcon
+	yandexAvitoIcon,
+	telegramIcon
 }

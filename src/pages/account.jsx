@@ -3,7 +3,7 @@ import { Footer } from "../layout"
 import { AccountHeader } from "../layout/account-header"
 import { Box } from '@chakra-ui/react'
 
-const Account = () => {
+export const Account = () => {
 	return (
 		<Box>
 			<AccountHeader />
@@ -16,5 +16,3 @@ const Account = () => {
 		</Box>
 	)
 }
-
-export default Account

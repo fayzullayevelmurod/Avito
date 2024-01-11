@@ -9,10 +9,13 @@ import {
 	MenuItem,
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import assets from '../assets'
+import { useState } from 'react'
 
 export const AccountHeader = () => {
+	const { pathname } = useLocation();
+
 	return (
 		<Box py={5} className="container">
 			<Flex justifyContent='space-between'>
@@ -20,7 +23,7 @@ export const AccountHeader = () => {
 					<img src={assets.avitoPlusLogo} alt="header logo" />
 				</Link>
 				<ButtonGroup gap={1}>
-					<Link to='#!'>
+					<Link to='/account'>
 						<Button
 							_hover={{
 								bgColor: 'purple.500',
@@ -29,11 +32,13 @@ export const AccountHeader = () => {
 							}}
 							colorScheme='gray'
 							variant='outline'
+							bgColor={pathname === '/account' ? 'purple.500' : ''}
+							color={pathname === '/account' ? 'white' : ''}
 						>
 							Аккаунты
 						</Button>
 					</Link>
-					<Link to='#!'>
+					<Link to='/subscription-services'>
 						<Button
 							_hover={{
 								bgColor: 'purple.500',
@@ -42,11 +47,13 @@ export const AccountHeader = () => {
 							}}
 							colorScheme='gray'
 							variant='outline'
+							bgColor={pathname === '/subscription-services' ? 'purple.500' : ''}
+							color={pathname === '/subscription-services' ? 'white' : ''}
 						>
 							Подписка
 						</Button>
 					</Link>
-					<Link to='#!'>
+					<Link to='/video-instruction'>
 						<Button
 							_hover={{
 								bgColor: 'purple.500',
