@@ -24,6 +24,8 @@ import ballon from './media/balon.png'
 import playIcon from './icons/play-icon.svg'
 import mediaRadiusBg from './media/media-radius.png'
 import mediaGoogleSheet from './media/mediaGoogleSheet.png'
+import yandexIcon from './icons/yandex-icon.svg'
+import yandexAvitoIcon from './icons/yande-avito-icon.png'
 
 export default {
 	avitoPlusLogo,
@@ -51,5 +53,7 @@ export default {
 	ballon,
 	playIcon,
 	mediaRadiusBg,
-	mediaGoogleSheet
+	mediaGoogleSheet,
+	yandexIcon,
+	yandexAvitoIcon
 }
