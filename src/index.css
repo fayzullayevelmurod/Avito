@@ -9,6 +9,10 @@ body {
 	margin: 0 auto;
 }
 
+.main {
+	min-height: calc(100vh - 80px - 85px);
+}
+
 /* colors */
 .purple {
 	color: #805AD5;
