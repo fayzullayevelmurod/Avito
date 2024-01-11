@@ -17,12 +17,13 @@ import shortReview from './media/short-rewiev.png'
 import starsGroup from './icons/stars-group.svg'
 import raketaIcon from './icons/raketa-icon.svg'
 import fireIcon from './icons/fire-icon.svg'
-import lampIcon from  './icons/lamp-icon1.svg'
+import lampIcon from './icons/lamp-icon1.svg'
 import fastIcon from './icons/fast-icon.svg'
 import subScripImg from './media/subscripbe-box-bg.png'
 import ballon from './media/balon.png'
 import playIcon from './icons/play-icon.svg'
 import mediaRadiusBg from './media/media-radius.png'
+import mediaGoogleSheet from './media/mediaGoogleSheet.png'
 
 export default {
 	avitoPlusLogo,
@@ -49,5 +50,6 @@ export default {
 	subScripImg,
 	ballon,
 	playIcon,
-	mediaRadiusBg
+	mediaRadiusBg,
+	mediaGoogleSheet
 }

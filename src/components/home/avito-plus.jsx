@@ -64,7 +64,7 @@ export const AvitoPlus = () => (
 								p: '16px'
 							},
 							"@media (max-width:480px)": {
-								height: '320px'
+								height: '330px'
 							}
 						}}
 						height='467px'
@@ -95,11 +95,24 @@ export const AvitoPlus = () => (
 								"@media (max-width:480px)": {
 									height: '266px',
 									width: '300px',
-									bottom: 'auto',
+									bottom: '-58px',
 								}
 							}}
 						>
-							<Image src={assets.fullGoogleSheet} />
+							<Image src={assets.fullGoogleSheet}
+								// sx={{
+								// 	"@media (max-width:480px)": {
+								// 		display: 'none'
+								// 	}
+								// }}
+							/>
+							{/* <Image src={assets.mediaGoogleSheet} display='none'
+								sx={{
+									"@media (max-width:480px)": {
+										display: 'block'
+									}
+								}}
+							/> */}
 						</Box>
 					</Box>
 				</GridItem>
@@ -199,6 +212,11 @@ export const AvitoPlus = () => (
 				position='relative'
 				overflow='hidden'
 				zIndex='1'
+				sx={{
+					"@media (max-width:800px)": {
+						pb: '40px'
+					}
+				}}
 			>
 				<Flex
 					justifyContent='space-between'
@@ -222,7 +240,7 @@ export const AvitoPlus = () => (
 						}}
 					>
 						<Heading
-							fontSize='24px'
+							fontSize={{ base: '20px', sm: '24px', md: '24px', lg: '24px' }}
 							fontWeight={700}
 							lineHeight='120%'
 							color='#171923'
@@ -232,6 +250,7 @@ export const AvitoPlus = () => (
 						<Text
 							pt={4}
 							pb={7}
+							fontSize={{ base: '15px', sm: '18px', md: '18px', lg: '18px' }}
 						>
 							Отслеживайте статистику по объявлениями и Авито аккаунтам. Анализируйте и принимайте решения на основе просмотров, конверсий, лайков и сообщений.
 						</Text>
@@ -356,7 +375,8 @@ export const AvitoPlus = () => (
 									"@media (max-width:480px)": {
 										padding: '10px',
 										width: '154px',
-										height: '80px'
+										height: '80px',
+										mt:'0' 
 									},
 								}}
 							>
@@ -431,18 +451,26 @@ export const AvitoPlus = () => (
 						"@media (max-width:800px)": {
 							width: '75%'
 						},
-						"@media (max-width:800px)": {
-							transform: 'rotate(39deg)',
-							right: '-146px',
-							bottom: '-138px',
-							width: '97%',
-							height: '66%'
+						"@media (max-width:700px)": {
+							width: '75%',
+							height: '50%'
 						},
-						// 39deg,-72px,-36%
-
 					}}
 				>
-					<Image src={assets.groupRadius} style={{ width: '100%', height: '100%' }} />
+					<Image src={assets.groupRadius} style={{ width: '100%', height: '100%' }}
+						sx={{
+							"@media (max-width:700px)": {
+								display: 'none'
+							}
+						}}
+					/>
+					<Image src={assets.mediaRadiusBg} style={{ width: '100%', height: '100%' }} display='none'
+						sx={{
+							"@media (max-width:700px)": {
+								display: 'block'
+							}
+						}}
+					/>
 				</Box>
 			</Box>
 		</div>
