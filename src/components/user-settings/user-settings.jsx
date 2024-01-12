@@ -15,11 +15,13 @@ import { Link } from 'react-router-dom'
 export const UserSettings = () => {
 
 	return (
-		<Box>
+		<Box mb={{ base: '80px', md: '0', lg: '0' }}>
 			<Flex
-				alignItems='center'
 				justifyContent='space-between'
-				m='44px 0 32px 0'
+				p={{ base: '36px 0 28px 0', sm: '35px 0 28px 0', md: '44px 0 32px 0', lg: '44px 0 32px 0' }}
+				flexDirection={{ base: 'column', lg: 'row' }}
+				alignItems={{ base: 'start', lg: 'center' }}
+				gap={{ base: '12px', lg: '0' }}
 			>
 				<Heading
 					fontSize={{ base: '22px', sm: '35px', md: '40px', lg: '48px' }}
@@ -27,7 +29,7 @@ export const UserSettings = () => {
 					color='#171923'
 					lineHeight='120%'
 				>
-					Подписка на сервис
+					Настройки пользователя
 				</Heading>
 				<Button
 					fontSize='16px'
@@ -58,15 +60,20 @@ export const UserSettings = () => {
 			</Flex>
 
 			<Flex
-				bgColor='white'
 				borderRadius='12px'
-				px='32px'
-				py='20px'
-				gap='20px'
-				alignItems='end'
-				mb='24px'
+				p={{ base: '0 0', md: '20px 32px', lg: '20px 32px' }}
+				gap={{ base: '12px', sm: '20px', md: '20px', lg: '20px' }}
+				mb={{ base: '28px', sm: '24px', md: '24px', lg: '24px' }}
+				flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
+				alignItems={{ base: 'start', md: 'end', lg: 'end' }}
+				bgColor={{ base: 'transparent', md: 'white', lg: 'white' }}
 			>
-				<Box flex='1 1 0'>
+				<Box
+					p={{ base: '20px', md: '0', lg: '20px 32px' }}
+					borderRadius={{ base: '12px', md: '0', lg: '0' }}
+					width={{ base: '100%', md: 'auto', lg: 'auto' }}
+					bgColor='white'
+					flex='1 1 0'>
 					<Text
 						lineHeight='120%'
 						color='#171923'
@@ -105,13 +112,28 @@ export const UserSettings = () => {
 								color: 'white'
 							}}
 							zIndex='10'
+							sx={{
+								"@media (max-width: 400px)": {
+									position: 'initial',
+									borderTopLeftRadius: '8px',
+									borderBottomLeftRadius: '8px',
+									width: '100%',
+									mt: '8px'
+								}
+							}}
 						>
 							Изменить
 						</Button>
 					</Box>
 				</Box>
 
-				<Box flex='1 1 0'>
+				<Box
+					p={{ base: '20px', md: '0', lg: '20px 32px' }}
+					borderRadius={{ base: '12px', md: '0', lg: '0' }}
+					width={{ base: '100%', md: 'auto', lg: 'auto' }}
+					bgColor='white'
+					flex='1 1 0'
+				>
 					<Text
 						lineHeight='120%'
 						color='#171923'
@@ -140,10 +162,16 @@ export const UserSettings = () => {
 						/>
 					</Box>
 				</Box>
-				<Box>
+				<Box
+					p={{ base: '20px', md: '0', lg: '20px 32px' }}
+					borderRadius={{ base: '12px', md: '0', lg: '0' }}
+					width={{ base: '100%', md: 'auto', lg: 'auto' }}
+					bgColor={'white'}
+				>
 					<Button
 						colorScheme='purple'
 						fontWeight='600'
+						width={{ base: '100%', md: 'auto', lg: 'auto' }}
 						lineHeight='24px'
 					>
 						Изменить пароль
@@ -154,8 +182,7 @@ export const UserSettings = () => {
 			<Box
 				bgColor='white'
 				borderRadius='12px'
-				px='32px'
-				py='20px'
+				p={{ base: '16px 20px', md: '20px 32px', lg: '20px 32px' }}
 			>
 				<Heading
 					fontSize='20px'
@@ -163,12 +190,18 @@ export const UserSettings = () => {
 					fontWeight='700'
 					lineHeight='120%'
 					mb='20px'
+					sx={{
+						"@media (max-width: 400px)": {
+							display: 'none'
+						}
+					}}
 				>
 					Настройки  подключения к Telegram
 				</Heading>
 				<Flex
-					alignItems='center'
-					gap='24px'
+					alignItems={{ base: 'center', sm: 'start', md: 'end', lg: 'end' }}
+					flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
+					gap={{ base: '16px', md: '24px', lg: '24px' }}
 				>
 					<Link to='#!'>
 						<Button
@@ -176,6 +209,7 @@ export const UserSettings = () => {
 							color='blue.500'
 							variant='outline'
 							fontSize={{ base: '14px', md: '16px', lg: '16px' }}
+							mx='auto'
 						>
 							Подключить Telegram Бот
 							<Image src={assets.telegramIcon} ml='13px' />
@@ -199,6 +233,6 @@ export const UserSettings = () => {
 					</Box>
 				</Flex>
 			</Box>
-		</Box>
+		</Box >
 	)
 }
