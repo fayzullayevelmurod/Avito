@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react'
 export const SubscriptionServices = () => {
 	return (
 		<Box bgColor='#fafafa'>
-			{/* <AccountHeader /> */}
+			<AccountHeader />
 			<Box className="main container" >
 				<SubscriptionMain />
 			</Box>

@@ -27,6 +27,7 @@ import mediaGoogleSheet from './media/mediaGoogleSheet.png'
 import yandexIcon from './icons/yandex-icon.svg'
 import yandexAvitoIcon from './icons/yande-avito-icon.png'
 import telegramIcon from './icons/telegram-icon.png'
+import noteFoundImg from './media/404-img.png'
 
 export default {
 	avitoPlusLogo,
@@ -57,5 +58,6 @@ export default {
 	mediaGoogleSheet,
 	yandexIcon,
 	yandexAvitoIcon,
-	telegramIcon
+	telegramIcon,
+	noteFoundImg
 }

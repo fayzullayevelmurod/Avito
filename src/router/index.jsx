@@ -1,4 +1,5 @@
 import { Account, Home, NotFoundPage, SubscriptionServices } from "../pages";
+import { Settings } from "../pages/settings";
 
 const coreRoutes = [
 	{
@@ -12,6 +13,10 @@ const coreRoutes = [
 	{
 		path: '/subscription-services',
 		component: SubscriptionServices,
+	},
+	{
+		path: '/user-settings',
+		component: Settings,
 	},
 	{
 		path: '*',

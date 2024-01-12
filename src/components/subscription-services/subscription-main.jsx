@@ -3,25 +3,9 @@ import {
 	Box,
 	Heading,
 	Text,
-	FormControl,
-	FormLabel,
-	Switch,
 	Button,
-	useClipboard,
-	Input,
-	Grid,
 	Image,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	Accordion,
-	AccordionItem,
-	AccordionButton,
-	AccordionIcon,
-	AccordionPanel,
-	Alert,
-	AlertIcon,
+	Grid,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import assets from '../../assets'
@@ -29,7 +13,7 @@ import assets from '../../assets'
 export const SubscriptionMain = () => {
 
 	return (
-		<Box mt='44px'>
+		<Box pt='44px'>
 			<Heading
 				fontSize={{ base: '22px', sm: '35px', md: '40px', lg: '48px' }}
 				fontWeight='700'
@@ -816,6 +800,681 @@ export const SubscriptionMain = () => {
 							</Flex>
 						</Flex>
 					</Flex>
+				</Flex>
+			</Box>
+			<Flex
+				mt='56px'
+				mb='23px'
+				alignItems='center'
+				justifyContent='space-between'
+			>
+				<Heading
+					fontSize={{ base: '22px', sm: '24px', md: '24px', lg: '24px' }}
+					fontWeight={700}
+					lineHeight='120%'
+					color='gray.900'
+				>
+					История платежей
+				</Heading>
+				<Flex
+					alignItems='center'
+					justifyContent='space-between'
+					gap='10px'
+					sx={{
+						"@media (max-width:711px)": {
+							display: 'none'
+						}
+					}}
+				>
+					<Text
+						fontSize='14px'
+						fontWeight={400}
+						lineHeight='20px'
+						color='gray.500'
+					>
+						Показывать по:
+					</Text>
+					<Box
+						bgColor='white'
+						borderRadius='9999px'
+						cursor='pointer'
+						transition='all 0.1s linear'
+						_hover={{
+							bgColor: 'purple.500',
+							color: 'white'
+						}}
+						py='4px'
+						px='16px'
+						color='purple.500'
+					>
+						5
+					</Box>
+					<Box
+						bgColor='white'
+						borderRadius='9999px'
+						cursor='pointer'
+						transition='all 0.1s linear'
+						_hover={{
+							bgColor: 'purple.500',
+							color: 'white'
+						}}
+						py='4px'
+						px='16px'
+						color='purple.500'
+					>
+						10
+					</Box>
+					<Box
+						bgColor='white'
+						borderRadius='9999px'
+						cursor='pointer'
+						transition='all 0.1s linear'
+						_hover={{
+							bgColor: 'purple.500',
+							color: 'white'
+						}}
+						py='4px'
+						px='16px'
+						color='purple.500'
+					>
+						15
+					</Box>
+					<Box
+						bgColor='white'
+						borderRadius='9999px'
+						cursor='pointer'
+						transition='all 0.1s linear'
+						_hover={{
+							bgColor: 'purple.500',
+							color: 'white'
+						}}
+						py='4px'
+						px='16px'
+						color='purple.500'
+					>
+						20
+					</Box>
+					<Box
+						bgColor='purple.500'
+						borderRadius='9999px'
+						cursor='pointer'
+						transition='all 0.1s linear'
+						_hover={{
+							bgColor: 'purple.500',
+							color: 'white'
+						}}
+						py='4px'
+						px='16px'
+						color='white'
+					>
+						Все
+					</Box>
+				</Flex>
+			</Flex>
+
+			<Box
+				mb={{ base: '80px', md: '100px', lg: '108px' }}
+				bgColor='white'
+				borderRadius='12px'
+				p='12px'
+				sx={{
+					"@media (max-width: 815px)": {
+						bgColor: 'transparent',
+						p: '0',
+						borderRadius: '0'
+					}
+				}}
+			>
+				<Flex
+					flexDirection='column'
+					sx={{
+						"@media (max-width: 815px)": {
+							gap: '12px'
+						}
+					}}
+				>
+					<Grid
+						py='12px'
+						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr) )'
+						borderBottom='1px solid #E2E8F0'
+						sx={{
+							"@media (max-width: 815px)": {
+								display: 'none'
+							}
+						}}
+					>
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							pl='20px'
+						>
+							НАИМЕНОВАНИЕ
+						</Text>
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							pl='20px'
+						>
+							ТРАНЗАКЦИЯ
+						</Text>
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							pl='20px'
+						>
+							ДАТА
+						</Text>
+					</Grid>
+
+					<Grid
+						flexDirection='column'
+						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
+						sx={{
+							"@media (max-width: 568px)": {
+								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
+							},
+							"@media (max-width:815px)": {
+								bgColor: 'white',
+								borderRadius: '12px',
+								p: '20px',
+							}
+						}}
+					>
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0'
+								}
+							}}
+						>
+							НАИМЕНОВАНИЕ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									pl: '0'
+								}
+							}}
+						>
+							Мой авито магазин
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0'
+								}
+							}}
+						>
+							ТРАНЗАКЦИЯ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+								}
+							}}
+						>
+							-2500 руб
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									border: 'none',
+									pl: '0'
+								}
+							}}
+						>
+							ДАТА
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									border: 'none',
+								}
+							}}
+						>
+							21.04.2023
+						</Text>
+					</Grid>
+
+					<Grid
+						flexDirection='column'
+						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
+						sx={{
+							"@media (max-width: 568px)": {
+								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
+							},
+							"@media (max-width:815px)": {
+								bgColor: 'white',
+								borderRadius: '12px',
+								p: '20px',
+							}
+						}}
+					>
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0'
+								}
+							}}
+						>
+							НАИМЕНОВАНИЕ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									pl: '0'
+								}
+							}}
+						>
+							Мой авито магазин
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0'
+								}
+							}}
+						>
+							ТРАНЗАКЦИЯ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+								}
+							}}
+						>
+							-2500 руб
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									border: 'none',
+									pl: '0'
+								}
+							}}
+						>
+							ДАТА
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									border: 'none',
+								}
+							}}
+						>
+							21.04.2023
+						</Text>
+					</Grid>
+
+					<Grid
+						flexDirection='column'
+						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
+						sx={{
+							"@media (max-width: 568px)": {
+								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
+							},
+							"@media (max-width:815px)": {
+								bgColor: 'white',
+								borderRadius: '12px',
+								p: '20px',
+							}
+						}}
+					>
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0'
+								}
+							}}
+						>
+							НАИМЕНОВАНИЕ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									pl: '0'
+								}
+							}}
+						>
+							Мой авито магазин
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0'
+								}
+							}}
+						>
+							ТРАНЗАКЦИЯ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+								}
+							}}
+						>
+							-2500 руб
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									border: 'none',
+									pl: '0'
+								}
+							}}
+						>
+							ДАТА
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							borderBottom='1px solid #E2E8F0'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									border: 'none',
+								}
+							}}
+						>
+							21.04.2023
+						</Text>
+					</Grid>
+
+					<Grid
+						flexDirection='column'
+						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
+						sx={{
+							"@media (max-width: 568px)": {
+								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
+							},
+							"@media (max-width:815px)": {
+								bgColor: 'white',
+								borderRadius: '12px',
+								p: '20px',
+							}
+						}}
+					>
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0'
+								}
+							}}
+						>
+							НАИМЕНОВАНИЕ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									pl: '0',
+									borderBottom: '1px solid #E2E8F0'
+								}
+							}}
+						>
+							Мой авито магазин
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									pl: '0',
+								}
+							}}
+						>
+							ТРАНЗАКЦИЯ
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									borderBottom: '1px solid #E2E8F0'
+								}
+							}}
+						>
+							-2500 руб
+						</Text>
+
+						<Text
+							fontSize='12px'
+							color='gray.600'
+							lineHeight='16px'
+							fontWeight='700'
+							borderBottom='1px solid #E2E8F0'
+							pl='20px'
+							py='16px'
+							display='none'
+							sx={{
+								"@media (max-width: 815px)": {
+									display: 'block',
+									border: 'none',
+									pl: '0'
+								}
+							}}
+						>
+							ДАТА
+						</Text>
+						<Text
+							fontSize='14px'
+							py='16px'
+							color='gray.700'
+							lineHeight='16px'
+							fontWeight='400'
+							pl='20px'
+							sx={{
+								"@media (max-width: 815px)": {
+									textAlign: 'right',
+									fontWeight: '500',
+									border: 'none',
+								}
+							}}
+						>
+							21.04.2023
+						</Text>
+					</Grid>
+
 				</Flex>
 			</Box>
 		</Box >
