@@ -11,7 +11,6 @@ import {
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { Link, useLocation } from "react-router-dom"
 import assets from '../assets'
-import { useState } from 'react'
 
 export const AccountHeader = () => {
 	const { pathname } = useLocation();
@@ -54,7 +53,7 @@ export const AccountHeader = () => {
 								Подписка
 							</Button>
 						</Link>
-						<Link to='/video-instruction'>
+						<Link to='/video-instructions'>
 							<Button
 								_hover={{
 									bgColor: 'purple.500',
@@ -63,6 +62,8 @@ export const AccountHeader = () => {
 								}}
 								colorScheme='gray'
 								variant='outline'
+								bgColor={pathname === '/video-instructions' ? 'purple.500' : ''}
+								color={pathname === '/video-instructions' ? 'white' : ''}
 							>
 								Видео-инструкции
 							</Button>

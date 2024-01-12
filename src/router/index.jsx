@@ -1,4 +1,5 @@
 import { Account, Home, NotFoundPage, SubscriptionServices } from "../pages";
+import { Instructions } from "../pages/instructions";
 import { Settings } from "../pages/settings";
 
 const coreRoutes = [
@@ -18,6 +19,11 @@ const coreRoutes = [
 		path: '/user-settings',
 		component: Settings,
 	},
+	{
+		path: '/video-instructions',
+		component: Instructions,
+	},
+
 	{
 		path: '*',
 		component: NotFoundPage

@@ -28,6 +28,8 @@ import yandexIcon from './icons/yandex-icon.svg'
 import yandexAvitoIcon from './icons/yande-avito-icon.png'
 import telegramIcon from './icons/telegram-icon.png'
 import noteFoundImg from './media/404-img.png'
+import purpleBallon from './media/purple-ballon.png'
+import avitoQrCode from './media/avito-qr-code.svg'
 
 export default {
 	avitoPlusLogo,
@@ -59,5 +61,7 @@ export default {
 	yandexIcon,
 	yandexAvitoIcon,
 	telegramIcon,
-	noteFoundImg
+	noteFoundImg,
+	purpleBallon,
+	avitoQrCode
 }

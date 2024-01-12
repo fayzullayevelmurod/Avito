@@ -13,7 +13,15 @@ export const NotFoundPage = () => (
 	<Box bgColor='#fafafa'>
 		<Header />
 		<Box className='container main' textAlign='center' mt={{ base: '80px', sm: '90px', md: '148px', lg: '136px' }}>
-			<Image src={assets.noteFoundImg} mx='auto' />
+			<Image
+				src={assets.noteFoundImg}
+				mx='auto'
+				sx={{
+					"@media (max-width: 480px)": {
+						ml: '-11px'
+					}
+				}}
+			/>
 			<Heading
 				color='#171923'
 				fontSize={{ base: '16px', sm: '35px', md: '48px', lg: '48px' }}
