@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 
 export const VideoInstructions = () => {
 	return (
-		<Box>
+		<Box pb='144px'>
 			<Heading
 				fontSize={{ base: '22px', sm: '35px', md: '40px', lg: '48px' }}
 				fontWeight='700'
@@ -73,14 +73,231 @@ export const VideoInstructions = () => {
 				</Box>
 			</Flex>
 
-			<Flex>
+			<Flex mt='40px' gap='20px'>
 				<Box
-					bgColor='#fff'
-					borderRadius='12px'
-					p='24px'
+					maxWidth={{ base: '100%', md: '299px', lg: '407px' }}
+					width='100%'
 				>
-
+					<Box
+						bgColor='#fff'
+						borderRadius='12px'
+						p={{ base: '16px', sm: '20px', md: '24px', lg: '24px' }}
+					>
+						<Text
+							fontWeight={500}
+							lineHeight='120%'
+							color='#171923'
+						>
+							Содержание
+						</Text>
+						<Flex gap='8px' flexDirection='column' mt='12px'>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Моя первая статья на сайте авито плюс
+							</Box>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Моя первая статья на сайте авито плюс
+							</Box>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Моя первая статья на сайте авито плюс
+							</Box>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Моя первая статья на сайте авито плюс
+							</Box>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Моя первая статья на сайте авито плюс
+							</Box>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Моя первая статья на сайте авито плюс
+							</Box>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Моя первая статья на сайте авито плюс
+							</Box>
+						</Flex>
+					</Box>
 				</Box>
+				<Flex width='100%' flexDirection='column' gap='20px'>
+					<Box
+						bgColor='#fff'
+						borderRadius='12px'
+						p={{ base: '16px', sm: '20px', md: '24px', lg: '24px' }}
+						width='100%'
+					>
+						<Heading
+							fontWeight={700}
+							lineHeight='120%'
+							color='#171923'
+							fontSize='20px'
+						>
+							Как продавать больше на Авито
+						</Heading>
+						<Text
+							lineHeight='150%'
+							color='#171923'
+							m='12px 0 24px 0'
+						>
+							Мы на связи, напишите нам, с радостью ответим на все ваши вопросы.
+						</Text>
+						<Box
+							height='319px'
+						>
+							<iframe
+								width='100%'
+								height='100%'
+								style={{ borderRadius: '20px' }}
+								src='https://www.youtube.com/embed/vhnFVeRGlCc?si=srdoZ6H0Ng8iXYOT'
+							/>
+						</Box>
+					</Box>
+					<Box
+						bgColor='#fff'
+						borderRadius='12px'
+						p={{ base: '16px', sm: '20px', md: '24px', lg: '24px' }}
+						width='100%'
+					>
+						<Heading
+							fontWeight={700}
+							lineHeight='120%'
+							color='#171923'
+							fontSize='20px'
+						>
+							Как продавать больше на Авито
+						</Heading>
+						<Text
+							lineHeight='150%'
+							color='#171923'
+							m='12px 0 24px 0'
+						>
+							Мы на связи, напишите нам, с радостью ответим на все ваши вопросы.
+						</Text>
+						<Box
+							height='319px'
+						>
+							<iframe
+								width='100%'
+								height='100%'
+								style={{ borderRadius: '20px' }}
+								src='https://www.youtube.com/embed/vhnFVeRGlCc?si=srdoZ6H0Ng8iXYOT'
+							/>
+						</Box>
+					</Box>
+
+					<Box
+						bgColor='#fff'
+						borderRadius='12px'
+						p={{ base: '16px', sm: '20px', md: '24px', lg: '24px' }}
+						width='100%'
+					>
+						<Heading
+							fontWeight={700}
+							lineHeight='120%'
+							color='#171923'
+							fontSize='20px'
+						>
+							Как продавать больше на Авито
+						</Heading>
+						<Text
+							lineHeight='150%'
+							color='#171923'
+							m='12px 0 24px 0'
+						>
+							Мы на связи, напишите нам, с радостью ответим на все ваши вопросы.
+						</Text>
+						<Box
+							height='319px'
+						>
+							<iframe
+								width='100%'
+								height='100%'
+								style={{ borderRadius: '20px' }}
+								src='https://www.youtube.com/embed/vhnFVeRGlCc?si=srdoZ6H0Ng8iXYOT'
+							/>
+						</Box>
+					</Box>
+				</Flex>
 			</Flex>
 		</Box>
 	)
