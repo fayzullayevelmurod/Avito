@@ -22,6 +22,7 @@ import {
 	AccordionPanel,
 	Alert,
 	AlertIcon,
+	Link
 } from '@chakra-ui/react'
 import {
 	ExternalLinkIcon,
@@ -30,7 +31,7 @@ import {
 	SettingsIcon,
 	CloseIcon,
 } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import assets from '../../assets';
 
 export const YourAccounts = () => {
@@ -38,15 +39,17 @@ export const YourAccounts = () => {
 	const { onCopy, value, setValue, hasCopied } = useClipboard("");
 
 	return (
-		<Box bgColor='#FAFAFA'>
+		<Box pb={{ base: '80px', sm: '100px', md: '100px', lg: '100px' }}>
 			<Flex
 				justifyContent='space-between'
 				alignItems='center'
 				pt='40px'
 				mb='32px'
+				flexWrap='wrap'
+				gap='24px'
 			>
 				<Heading
-					fontSize='48px'
+					fontSize={{ base: '22px', sm: '35px', md: '40px', lg: '48px' }}
 					fontWeight='700'
 					color='#171923'
 					lineHeight='120%'
@@ -69,7 +72,15 @@ export const YourAccounts = () => {
 							bgColor: '#E2E8F0',
 						}}
 					>
-						<Text whiteSpace='nowrap' lineHeight='20px'>
+						<Text
+							whiteSpace='nowrap'
+							lineHeight='20px'
+							sx={{
+								"@media (max-width: 480px)": {
+									fontSize: '14px'
+								}
+							}}
+						>
 							Добавить аккаунт
 						</Text>
 						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -79,7 +90,16 @@ export const YourAccounts = () => {
 						</svg>
 					</Flex>
 					<FormControl display='flex' alignItems='center'>
-						<FormLabel color='#171923' htmlFor='email-alerts' mb='0'>
+						<FormLabel
+							sx={{
+								"@media (max-width: 480px)": {
+									fontSize: '14px'
+								}
+							}}
+							color='#171923'
+							htmlFor='email-alerts'
+							mb='0'
+						>
 							Архивные
 						</FormLabel>
 						<Switch id='email-alerts' colorScheme='purple' />
@@ -88,24 +108,44 @@ export const YourAccounts = () => {
 			</Flex>
 			<Box bgColor='white'
 				borderRadius='12px'
-				p='32px'
+				p={{ base: '20px', sm: '28px', md: '32px', lg: '32px' }}
 				position='relative'
 			>
-				<Grid
-					templateColumns='repeat(2, 1fr)'
+				<Flex
 					gap='40px'
 					mb='24px'
+					flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
 				>
-					<Box>
+					<Box
+						width={{ md: '490px', lg: 'auto' }}
+						sx={{
+							"@media (max-width:830px)": {
+								width: '100%'
+							}
+						}}
+					>
 						<Flex
 							gap='16px'
 							alignItems='center'
+							sx={{
+								"@media (max-width:480px)": {
+									flexDirection: 'column',
+									alignItems: 'start',
+									gap: '8px'
+								}
+							}}
 						>
 							<Heading
 								fontSize='24px'
 								fontWeight={600}
 								lineHeight='120%'
 								color='#171923'
+								sx={{
+									"@media (max-width:480px)": {
+										order: '1',
+										fontSize: '22px'
+									}
+								}}
 							>
 								Мой авито магазин
 							</Heading>
@@ -123,10 +163,27 @@ export const YourAccounts = () => {
 						<Flex
 							mt='20px'
 							gap='15px'
+							sx={{
+								"@media (max-width: 830px)": {
+									flexWrap: 'wrap'
+								}
+							}}
 						>
-							<Link>
+							<Link
+								sx={{
+									"@media (max-width: 830px)": {
+										width: '100%'
+									}
+								}}
+								href='#!'
+							>
 								<Button
 									colorScheme='green'
+									sx={{
+										"@media (max-width: 830px)": {
+											width: '100%'
+										}
+									}}
 									px='12px'
 									variant='outline'
 									_hover={{ bgColor: 'green.500', color: 'white' }}
@@ -141,7 +198,6 @@ export const YourAccounts = () => {
 								</Button>
 							</Link>
 							<Flex
-								mb={2}
 								position='relative'
 								width='100%'
 							>
@@ -151,6 +207,10 @@ export const YourAccounts = () => {
 									width='100%'
 									onChange={(e) => {
 										setValue(e.target.value);
+									}}
+									_focusVisible={{
+										borderColor: 'none',
+										boxShadow: 'none'
 									}}
 								/>
 								<Button
@@ -166,10 +226,25 @@ export const YourAccounts = () => {
 							</Flex>
 						</Flex>
 						<Box mt='12px'>
-							<Flex gap='14px'>
-								<Link to='#!'>
+							<Flex
+								gap='14px'
+								flexWrap={{ base: 'wrap', lg: 'nowrap' }}
+							>
+								<Link
+									href='#!'
+									sx={{
+										"@media (max-width: 830px)": {
+											width: '100%'
+										}
+									}}
+								>
 									<Button
 										variant='outline'
+										sx={{
+											"@media (max-width: 830px)": {
+												width: '100%'
+											}
+										}}
 									>
 										<Text mr='8px'
 											fontSize='14px'
@@ -181,10 +256,21 @@ export const YourAccounts = () => {
 										<Image src={assets.yandexIcon} width='19px' height='19px' />
 									</Button>
 								</Link>
-								<Link to='#!'>
+								<Link
+									href='#!'
+									sx={{
+										"@media (max-width: 830px)": {
+											width: '100%'
+										}
+									}}
+								>
 									<Button
-										// variant='outline'
 										bgColor='gray.200'
+										sx={{
+											"@media (max-width: 830px)": {
+												width: '100%'
+											}
+										}}
 									>
 										<Text mr='8px'
 											fontSize='14px'
@@ -196,7 +282,14 @@ export const YourAccounts = () => {
 										<Image src={assets.yandexAvitoIcon} width='19px' height='19px' />
 									</Button>
 								</Link>
-								<Link to='#!'>
+								<Link
+									sx={{
+										"@media (max-width: 830px)": {
+											width: '100%'
+										}
+									}}
+									href='#!'
+								>
 									<Button
 										color='purple.500'
 										colorScheme='purple'
@@ -204,6 +297,11 @@ export const YourAccounts = () => {
 										_hover={{
 											bgColor: 'purple.500',
 											color: 'white'
+										}}
+										sx={{
+											"@media (max-width: 830px)": {
+												width: '100%'
+											}
 										}}
 									>
 										<Text mr='8px'
@@ -218,6 +316,16 @@ export const YourAccounts = () => {
 							</Flex>
 						</Box>
 					</Box>
+					<Box
+						display='none'
+						sx={{
+							"@media (max-width: 768px)": {
+								display: 'block'
+							}
+						}}
+					>
+						<hr />
+					</Box>
 					<Box>
 						<Heading
 							fontSize='16px'
@@ -227,15 +335,14 @@ export const YourAccounts = () => {
 						>
 							Категории в таблице
 						</Heading>
-						<Box
-							position='absolute'
-							top='32px'
-							right='32px'
-							cursor='pointer'
-						>
-
+						<Box>
 							<Menu>
-								<MenuButton >
+								<MenuButton
+									position='absolute'
+									top={{ base: '16px', sm: '28px', md: '32px', lg: '32px' }}
+									right={{ base: '16px', sm: '28px', md: '32px', lg: '32px' }}
+									cursor='pointer'
+								>
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 										<path d="M12 7C11.4696 7 10.9609 6.78929 10.5858 6.41421C10.2107 6.03914 10 5.53043 10 5C10 4.46957 10.2107 3.96086 10.5858 3.58579C10.9609 3.21071 11.4696 3 12 3C12.5304 3 13.0391 3.21071 13.4142 3.58579C13.7893 3.96086 14 4.46957 14 5C14 5.53043 13.7893 6.03914 13.4142 6.41421C13.0391 6.78929 12.5304 7 12 7ZM12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14ZM12 21C11.4696 21 10.9609 20.7893 10.5858 20.4142C10.2107 20.0391 10 19.5304 10 19C10 18.4696 10.2107 17.9609 10.5858 17.5858C10.9609 17.2107 11.4696 17 12 17C12.5304 17 13.0391 17.2107 13.4142 17.5858C13.7893 17.9609 14 18.4696 14 19C14 19.5304 13.7893 20.0391 13.4142 20.4142C13.0391 20.7893 12.5304 21 12 21Z" fill="#718096" />
 									</svg>
@@ -253,15 +360,22 @@ export const YourAccounts = () => {
 						<Flex
 							gap='5px'
 							flexWrap='wrap'
+							sx={{
+								"@media (max-width:480px)": {
+									flexWrap: 'nowrap',
+									alignItems: 'end'
+								}
+							}}
 						>
 							<Flex
 								gap='5px'
+								flexWrap='wrap'
 							>
 								<Flex
 									bgColor='#E9D8FD'
 									fontSize='12px'
 									borderRadius='6px'
-									px='8px'
+									p='4px 8px'
 									gap='8px'
 									width='fit-content'
 									color='#44337A'
@@ -275,7 +389,7 @@ export const YourAccounts = () => {
 									bgColor='#E9D8FD'
 									fontSize='12px'
 									borderRadius='6px'
-									px='8px'
+									p='4px 8px'
 									gap='8px'
 									width='fit-content'
 									color='#44337A'
@@ -289,7 +403,7 @@ export const YourAccounts = () => {
 									bgColor='#E9D8FD'
 									fontSize='12px'
 									borderRadius='6px'
-									px='8px'
+									p='4px 8px'
 									gap='8px'
 									width='fit-content'
 									color='#44337A'
@@ -306,12 +420,17 @@ export const YourAccounts = () => {
 								lineHeight='16px'
 								color='#6B46C1'
 								fontWeight='500'
+								sx={{
+									"@media (max-width:480px)": {
+										mb: '5px'
+									}
+								}}
 							>
 								Добавить
 							</Text>
 						</Flex>
 					</Box>
-				</Grid>
+				</Flex>
 				<hr />
 				<Box mt='24px'>
 					<Accordion allowMultiple>
@@ -346,13 +465,14 @@ export const YourAccounts = () => {
 								pt='12px'
 							>
 								<Grid
-									templateColumns='repeat(2, 1fr)'
+									templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
 									gap='12px'
+
 								>
 									<Box
 										border='1px solid #E2E8F0'
 										borderRadius='12px'
-										p='24px'
+										p={{ base: '20px', sm: '24px', md: '24px', lg: '24px' }}
 									>
 										<Box
 											as='span'
@@ -367,11 +487,24 @@ export const YourAccounts = () => {
 										<Grid
 											templateColumns='repeat(2, 1fr)'
 											mt='12px'
+											sx={{
+												"@media (max-width:435px)": {
+													display: 'flex',
+													flexDirection: 'column',
+												}
+											}}
 										>
 											<Flex
 												justifyContent='space-between'
 												pr='17px'
+												flexWrap='wrap'
 												pb='12px'
+												sx={{
+													"@media (max-width:435px)": {
+														pr: '0',
+														border: 'none'
+													}
+												}}
 												borderRight='1px solid #E2E8F0'
 											>
 												<Box
@@ -382,7 +515,7 @@ export const YourAccounts = () => {
 												>
 													Занято
 												</Box>
-												<Flex
+												<Box
 													fontSize='12px'
 													color='#2D3748'
 													fontWeight='700'
@@ -399,12 +532,19 @@ export const YourAccounts = () => {
 													>
 														22 из 100
 													</Text>
-												</Flex>
+												</Box>
 											</Flex>
 											<Flex
 												justifyContent='space-between'
 												pl='17px'
 												pb='12px'
+												sx={{
+													"@media (max-width:435px)": {
+														pl: '0',
+														pt: '12px',
+														borderTop: '1px solid #e2e9f0'
+													}
+												}}
 											>
 												<Box
 													fontSize='12px'
@@ -438,6 +578,12 @@ export const YourAccounts = () => {
 												borderRight='1px solid #E2E8F0'
 												pr='17px'
 												py='12px'
+												sx={{
+													"@media (max-width:435px)": {
+														pr: '0',
+														borderRight: '0'
+													}
+												}}
 												borderBottom='1px solid #E2E8F0'
 												borderTop='1px solid #E2E8F0'
 											>
@@ -473,6 +619,12 @@ export const YourAccounts = () => {
 												justifyContent='space-between'
 												pl='17px'
 												py='12px'
+												sx={{
+													"@media (max-width:435px)": {
+														pl: '0',
+														borderTop: 'none'
+													}
+												}}
 												borderBottom='1px solid #E2E8F0'
 												borderTop='1px solid #E2E8F0'
 											>
@@ -508,6 +660,13 @@ export const YourAccounts = () => {
 												borderRight='1px solid #E2E8F0'
 												pr='17px'
 												pt='12px'
+												sx={{
+													"@media (max-width:435px)": {
+														pr: '0',
+														pb: '12px',
+														border: 'none'
+													}
+												}}
 											>
 												<Box
 													fontSize='12px'
@@ -541,6 +700,12 @@ export const YourAccounts = () => {
 												justifyContent='space-between'
 												pl='17px'
 												pt='12px'
+												sx={{
+													"@media (max-width:435px)": {
+														pl: '0',
+														borderTop: '1px solid #E2E8F0'
+													}
+												}}
 											>
 												<Box
 													fontSize='12px'
@@ -574,12 +739,20 @@ export const YourAccounts = () => {
 									<Box
 										border='1px solid #E2E8F0'
 										borderRadius='12px'
-										p='24px'
+										p={{ base: '20px', sm: '24px', md: '24px', lg: '24px' }}
 									>
 										<Flex
 											justifyContent='space-between'
+											gap={{ base: '10px', md: '32px', lg: '10px' }}
+											sx={{
+												"@media (max-width:668px)": {
+													flexWrap: 'wrap'
+												}
+											}}
 										>
-											<Box>
+											<Box
+												flex='1 1 0'
+											>
 												<Heading
 													fontSize='12px'
 													color='gray.700'
@@ -598,7 +771,12 @@ export const YourAccounts = () => {
 														py='6px'
 														bgColor='#BEE3F8'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -621,11 +799,12 @@ export const YourAccounts = () => {
 														</Flex>
 													</Box>
 													<Box
+														flex='1 1 0'
 														px='8px'
 														py='6px'
 														bgColor='#EDF2F7'
 														borderRadius='6px'
-														width='163px'
+														width='100%'
 													>
 														<Flex
 															alignItems='center'
@@ -648,11 +827,17 @@ export const YourAccounts = () => {
 														</Flex>
 													</Box>
 													<Box
+														flex='1 1 0'
 														px='8px'
 														py='6px'
 														bgColor='#FEEBCB'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -676,7 +861,7 @@ export const YourAccounts = () => {
 													</Box>
 												</Flex>
 											</Box>
-											<Box>
+											<Box flex='1 1 0'>
 												<Heading
 													fontSize='12px'
 													color='gray.700'
@@ -695,7 +880,12 @@ export const YourAccounts = () => {
 														py='6px'
 														bgColor='#BEE3F8'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -722,7 +912,12 @@ export const YourAccounts = () => {
 														py='6px'
 														bgColor='#EDF2F7'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -749,7 +944,12 @@ export const YourAccounts = () => {
 														py='6px'
 														bgColor='#FEEBCB'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -773,7 +973,7 @@ export const YourAccounts = () => {
 													</Box>
 												</Flex>
 											</Box>
-											<Box>
+											<Box flex='1 1 0'>
 												<Heading
 													fontSize='12px'
 													color='gray.700'
@@ -792,7 +992,12 @@ export const YourAccounts = () => {
 														py='6px'
 														bgColor='#BEE3F8'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -819,7 +1024,12 @@ export const YourAccounts = () => {
 														py='6px'
 														bgColor='#EDF2F7'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -846,7 +1056,12 @@ export const YourAccounts = () => {
 														py='6px'
 														bgColor='#FEEBCB'
 														borderRadius='6px'
-														width='163px'
+														width={{ base: '100%', lg: '163px' }}
+														sx={{
+															"@media (max-width: 650px)": {
+																width: '100%',
+															}
+														}}
 													>
 														<Flex
 															alignItems='center'
@@ -872,13 +1087,52 @@ export const YourAccounts = () => {
 											</Box>
 										</Flex>
 									</Box>
+									<Alert width='100%' bgColor='#FAF5FF' borderRadius='12px' alignItems='start'>
+										<AlertIcon color='purple.500' />
+										<Box>
+											<Heading lineHeight='24px' fontSize='16px'>
+												Подключите Яндекс Диск
+											</Heading>
+											<Text
+												lineHeight='140%'
+												color='#2D3748'
+											>
+												Сейчас вы не можете загрузить изображения
+											</Text>
+										</Box>
+									</Alert>
+
+									<Alert width='100%' bgColor='#FAF5FF' borderRadius='12px' alignItems='start'>
+										<AlertIcon color='purple.500' />
+										<Box>
+											<Heading lineHeight='24px' fontSize='16px'>
+												Подключите Авито
+											</Heading>
+											<Text
+												lineHeight='140%'
+												color='#2D3748'
+											>
+												Сейчас вы не можете выгружать объявления
+											</Text>
+										</Box>
+									</Alert>
 								</Grid>
 							</AccordionPanel>
 						</AccordionItem>
 					</Accordion>
 				</Box>
 				<Box mt='24px'>
-					<Alert width='50%' status='warning' borderRadius='12px' alignItems='start'>
+					<Alert
+						width='50%'
+						status='warning'
+						borderRadius='12px'
+						alignItems='start'
+						sx={{
+							"@media (max-width:830px)": {
+								width: '100%'
+							}
+						}}
+					>
 						<AlertIcon />
 						<Box>
 							<Heading lineHeight='24px' fontSize='16px'>
@@ -898,6 +1152,7 @@ export const YourAccounts = () => {
 
 					>
 						<Button
+							width={{ base: '100%', sm: 'auto', md: 'auto', lg: 'auto' }}
 							color='white'
 							mt='24px'
 							bgColor='orange.500'
@@ -909,7 +1164,7 @@ export const YourAccounts = () => {
 						</Button>
 					</Link>
 				</Box>
-			</Box>
-		</Box>
+			</Box >
+		</Box >
 	)
 }

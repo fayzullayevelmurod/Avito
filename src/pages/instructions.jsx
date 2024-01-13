@@ -7,7 +7,7 @@ import {
 
 export const Instructions = () => {
 	return (
-		<Box bgColor='#ccc'>
+		<Box bgColor='#fafafa'>
 			<AccountHeader />
 			<Box className="container main">
 				<VideoInstructions />

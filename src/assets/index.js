@@ -30,6 +30,8 @@ import telegramIcon from './icons/telegram-icon.png'
 import noteFoundImg from './media/404-img.png'
 import purpleBallon from './media/purple-ballon.png'
 import avitoQrCode from './media/avito-qr-code.svg'
+import closeIcon from './icons/close-icon.svg'
+import menueIcon from './icons/menu-icon.svg'
 
 export default {
 	avitoPlusLogo,
@@ -63,5 +65,7 @@ export default {
 	telegramIcon,
 	noteFoundImg,
 	purpleBallon,
-	avitoQrCode
+	avitoQrCode,
+	closeIcon,
+	menueIcon
 }
