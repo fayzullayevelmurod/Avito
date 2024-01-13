@@ -1,5 +1,4 @@
-import { Account, Home, NotFoundPage, SubscriptionServices } from "../pages";
-import { Instructions } from "../pages/instructions";
+import { Account, Home, NotFoundPage, SubscriptionServices, Instructions } from "../pages";
 import { Settings } from "../pages/settings";
 
 const coreRoutes = [

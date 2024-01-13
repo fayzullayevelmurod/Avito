@@ -15,7 +15,7 @@ export const AvitoPlus = () => (
 	<Box
 		color='#171923'
 		bgColor='#FAFAFA'
-		py='144px'
+		py={{ base: '20px', sm: '100px', md: '100px', lg: '144px' }}
 		mb='144px'
 		sx={{
 			"@media (max-width:500px)": {
@@ -64,7 +64,9 @@ export const AvitoPlus = () => (
 								p: '16px'
 							},
 							"@media (max-width:480px)": {
-								height: '330px'
+								height: '330px',
+								borderRadius: '20px',
+								p: '16px'
 							}
 						}}
 						height='467px'
@@ -100,11 +102,11 @@ export const AvitoPlus = () => (
 							}}
 						>
 							<Image src={assets.fullGoogleSheet}
-								// sx={{
-								// 	"@media (max-width:480px)": {
-								// 		display: 'none'
-								// 	}
-								// }}
+							// sx={{
+							// 	"@media (max-width:480px)": {
+							// 		display: 'none'
+							// 	}
+							// }}
 							/>
 							{/* <Image src={assets.mediaGoogleSheet} display='none'
 								sx={{
@@ -167,7 +169,8 @@ export const AvitoPlus = () => (
 						},
 						"@media (max-width:480px)": {
 							height: '320px',
-							p: '20px'
+							borderRadius: '20px',
+							p: '16px'
 						}
 					}}
 				>
@@ -215,7 +218,11 @@ export const AvitoPlus = () => (
 				sx={{
 					"@media (max-width:800px)": {
 						pb: '40px'
-					}
+					},
+					"@media (max-width:480px)": {
+						p: '20px',
+						borderRadius: '20px'
+					},
 				}}
 			>
 				<Flex
@@ -248,8 +255,8 @@ export const AvitoPlus = () => (
 							Статистика Авито
 						</Heading>
 						<Text
-							pt={4}
-							pb={7}
+							pt={{ base: '12px', sm: 4, md: 4, lg: 4 }}
+							pb={{ base: '22px', sm: 7, md: 7, lg: 7 }}
 							fontSize={{ base: '15px', sm: '18px', md: '18px', lg: '18px' }}
 						>
 							Отслеживайте статистику по объявлениями и Авито аккаунтам. Анализируйте и принимайте решения на основе просмотров, конверсий, лайков и сообщений.
@@ -376,7 +383,7 @@ export const AvitoPlus = () => (
 										padding: '10px',
 										width: '154px',
 										height: '80px',
-										mt:'0' 
+										mt: '0'
 									},
 								}}
 							>

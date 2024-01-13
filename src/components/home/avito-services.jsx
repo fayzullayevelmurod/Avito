@@ -35,7 +35,8 @@ export const AvitoServices = () => (
 				pt={8}
 				sx={{
 					"@media (max-width:480px)": {
-						px: '20px',
+						p: '20px 20px 0 20px',
+						borderRadius: '20px'
 					}
 				}}
 				borderRadius={32}
@@ -81,7 +82,8 @@ export const AvitoServices = () => (
 				px={8}
 				sx={{
 					"@media (max-width:480px)": {
-						px: '20px',
+						p: '20px 20px 0 20px',
+						borderRadius: '20px'
 					}
 				}}
 				pt={8}
@@ -141,6 +143,9 @@ export const AvitoServices = () => (
 			sx={{
 				"@media (max-width:768px)": {
 					flexDirection: 'column'
+				},
+				"@media (max-width:480px)": {
+					gap: '16px'
 				}
 			}}
 		>
@@ -155,7 +160,9 @@ export const AvitoServices = () => (
 				overflow='hidden'
 				sx={{
 					"@media (max-width:480px)": {
-						height: '458px',
+						height: '468px',
+						p: '20px 20px 0 20px',
+						borderRadius: '20px'
 					}
 				}}
 			>
@@ -195,7 +202,7 @@ export const AvitoServices = () => (
 							width: '735px'
 						},
 						"@media (max-width: 480px)": {
-							width: '627px'
+							width: '584px'
 						}
 					}}
 				>
@@ -211,9 +218,12 @@ export const AvitoServices = () => (
 				borderRadius={32}
 				height='522px'
 				position='relative'
+				overflow='hidden'
 				sx={{
 					"@media (max-width:480px)": {
 						height: '363px',
+						p: '20px 20px 0 20px',
+						borderRadius: '20px'
 					}
 				}}
 			>
@@ -226,7 +236,8 @@ export const AvitoServices = () => (
 					Автоматизация
 				</Heading>
 				<Text
-					my='16px'
+					mt={{ base: '12px', sm: '16px', md: '16px', lg: '16px' }}
+					mb='16px'
 					color='#2D3748'
 					lineHeight='150%'
 					sx={{
@@ -246,7 +257,8 @@ export const AvitoServices = () => (
 					right='0'
 					sx={{
 						"@media (max-width:480px)": {
-							width: '200px',
+							width: '215px',
+							height: '210px'
 						}
 					}}
 				>

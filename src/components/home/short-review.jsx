@@ -38,7 +38,7 @@ export const ShortReview = () => {
 				},
 				"@media (max-width: 768px)": {
 					flexDirection: 'column',
-					mt: '421px',
+					mt: '470px',
 					gap: '36px',
 					mb: '80px'
 				}
@@ -93,7 +93,7 @@ export const ShortReview = () => {
 					}}
 				>
 					Используйте разное время публикации, разные станции метро и адреса, отслеживайте статистику и включайте рекламу —
-					<span style={{ fontWeight: '600', color: '#805ad5' }}>Это все не покидая таблицы.</span>
+					<Box as='span' display={'block'} style={{ fontWeight: '600', color: '#805ad5' }}>Это все не покидая таблицы.</Box>
 				</Text>
 				<Flex
 					gap={{ base: '10px', md: '30px' }}

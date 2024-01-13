@@ -32,7 +32,7 @@ export const UserSettings = () => {
 					Настройки пользователя
 				</Heading>
 				<Button
-					fontSize='16px'
+					fontSize={{ base: '12px', sm: '16px', md: '16px', lg: '16px' }}
 					fontWeight='600'
 					lineHeight='24px'
 					color='#1a202c'
@@ -73,7 +73,16 @@ export const UserSettings = () => {
 					borderRadius={{ base: '12px', md: '0', lg: '0' }}
 					width={{ base: '100%', md: 'auto', lg: 'auto' }}
 					bgColor='white'
-					flex='1 1 0'>
+					flex='1 1 0'
+					sx={{
+						"@media (max-width:1300px)": {
+							px: '0'
+						},
+						"@media (max-width:768px)": {
+							px: '20px'
+						}
+					}}
+				>
 					<Text
 						lineHeight='120%'
 						color='#171923'
@@ -83,6 +92,14 @@ export const UserSettings = () => {
 					</Text>
 					<Box
 						position='relative'
+						sx={{
+							"@media (max-width:1300px)": {
+								maxWidth: '326px'
+							},
+							"@media (max-width:768px)": {
+								maxWidth: '100%'
+							},
+						}}
 					>
 						<Input
 							placeholder='Alexander'
@@ -133,6 +150,14 @@ export const UserSettings = () => {
 					width={{ base: '100%', md: 'auto', lg: 'auto' }}
 					bgColor='white'
 					flex='1 1 0'
+					sx={{
+						"@media (max-width:1300px)": {
+							px: '0'
+						},
+						"@media (max-width:768px)": {
+							px: '20px'
+						}
+					}}
 				>
 					<Text
 						lineHeight='120%'
@@ -143,6 +168,14 @@ export const UserSettings = () => {
 					</Text>
 					<Box
 						position='relative'
+						sx={{
+							"@media (max-width:1300px)": {
+								maxWidth: '326px'
+							},
+							"@media (max-width:768px)": {
+								maxWidth: '100%'
+							},
+						}}
 					>
 						<Input
 							placeholder='mail.mai'
@@ -167,6 +200,14 @@ export const UserSettings = () => {
 					borderRadius={{ base: '12px', md: '0', lg: '0' }}
 					width={{ base: '100%', md: 'auto', lg: 'auto' }}
 					bgColor={'white'}
+					sx={{
+						"@media (max-width:1300px)": {
+							px: '0'
+						},
+						"@media (max-width:768px)": {
+							px: '20px'
+						}
+					}}
 				>
 					<Button
 						colorScheme='purple'
@@ -199,7 +240,7 @@ export const UserSettings = () => {
 					Настройки  подключения к Telegram
 				</Heading>
 				<Flex
-					alignItems={{ base: 'center', sm: 'start', md: 'end', lg: 'end' }}
+					alignItems={{ base: 'center', sm: 'start', md: 'center', lg: 'center' }}
 					flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
 					gap={{ base: '16px', md: '24px', lg: '24px' }}
 				>
@@ -217,7 +258,7 @@ export const UserSettings = () => {
 					</Link>
 					<Box
 						sx={{
-							"@media (max-width: 550px)": {
+							"@media (max-width: 768px)": {
 								order: '-1'
 							}
 						}}
