@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 export const NotFoundPage = () => (
 	<Box bgColor='#fafafa'>
 		<Header />
-		<Box className='container main' textAlign='center' mt={{ base: '80px', sm: '90px', md: '148px', lg: '136px' }}>
+		<Box mb='80px' className='container main' textAlign='center' mt={{ base: '80px', sm: '90px', md: '148px', lg: '136px' }}>
 			<Image
 				src={assets.noteFoundImg}
 				mx='auto'
@@ -24,7 +24,7 @@ export const NotFoundPage = () => (
 			/>
 			<Heading
 				color='#171923'
-				fontSize={{ base: '16px', sm: '35px', md: '48px', lg: '48px' }}
+				fontSize={{ base: '32', sm: '35px', md: '48px', lg: '48px' }}
 				fontWeight='700'
 				lineHeight='120%'
 				mb='18px'
@@ -33,14 +33,14 @@ export const NotFoundPage = () => (
 			</Heading>
 			<Text
 				color='#4A5568'
-				mb='45px'
+				mb={{ base: '40px', sm: '45px', md: '45px', lg: '45px' }}
 				fontSize={{ base: '15px', sm: '18px', md: '18px', lg: '18px' }}
 				maxWidth={{ base: '100%', md: '615px', lg: '615px' }}
 				mx='auto'
 			>
 				Похоже, эта страница была перемещена или удалена, вернитесь на главную страницу
 			</Text>
-			<Link to='/'>
+			<Link className='h-48' to='/'>
 				<Button
 					fontSize={{ base: '16px', sm: '18px', md: '18px', lg: '18px' }}
 					lineHeight='28px'
@@ -50,6 +50,7 @@ export const NotFoundPage = () => (
 					sx={{
 						"@media (max-width: 480px)": {
 							width: '100%',
+							height: '48px',
 						}
 					}}
 				>
