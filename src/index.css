@@ -12,9 +12,11 @@ body {
 .main {
 	min-height: calc(100vh - 80px - 85px);
 }
-.no-scroll{
+
+.no-scroll {
 	overflow-y: hidden;
 }
+
 /* colors */
 .purple {
 	color: #805AD5;
@@ -90,6 +92,10 @@ body {
 
 	.media-full {
 		width: 100%;
+	}
+
+	.h-48 {
+		height: 48px !important;
 	}
 
 	.subscription-section .outline-link-button,

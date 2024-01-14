@@ -836,7 +836,9 @@ export const Subscription = () => (
 				sx={{
 					"@media (max-width:480px)": {
 						p: '20px',
-						borderRadius: '20px'
+						borderRadius: '20px',
+						bgPosition: '145px 0px'
+
 					}
 				}}
 			>

@@ -101,7 +101,7 @@ export const ShortReview = () => {
 					justify='start'
 				>
 					<Link
-						className='link-button media-full'
+						className='link-button media-full h-48'
 					>
 						<Image src={assets?.lightning} alt="liglightning icon" display={'inline-block'} />
 						Начните сейчас

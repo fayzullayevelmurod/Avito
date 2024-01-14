@@ -21,6 +21,7 @@ export const Welcome = () => (
 			"@media (max-width: 480px)": {
 				px: '20px',
 				pt: '28px',
+				borderRadius: '20px !important'
 			}
 		}}
 	>
@@ -65,7 +66,7 @@ export const Welcome = () => (
 				justifyContent='center'
 				className='media-mb'
 			>
-				<Link to='#!' className='link-button media-full'>
+				<Link to='#!' className='link-button media-full h-48'>
 					<Image src={assets.lightning} alt="liglightning icon" display={'inline-block'} />
 					Начните сейчас
 				</Link>
@@ -99,7 +100,7 @@ export const Welcome = () => (
 			<Box
 				className='avito-plus__card'
 				backgroundColor='white'
-				borderRadius={32}
+				borderRadius={{ base: 20, sm: 32, md: 32, lg: 32 }}
 				p={{ base: '20px', md: '32px', lg: '40px' }}
 				maxWidth='668px'
 				sx={{
@@ -177,7 +178,7 @@ export const Welcome = () => (
 				maxW='380px'
 				width='100%'
 				bgImage={assets.plusBg}
-				bgColor='purple.500'
+				bgColor='#6548aa'
 				p={{ base: '20px', md: '32px', lg: '40px' }}
 				color='white'
 				textAlign='center'

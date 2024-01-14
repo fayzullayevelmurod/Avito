@@ -70,6 +70,7 @@ export const VideoInstructions = () => {
 										bgColor: 'purple.500',
 										color: 'white'
 									}}
+									height={{ base: '48px', sm: 'auto', md: 'auto', lg: 'auto' }}
 								>
 									Спросить поддержку
 								</Button>
@@ -96,6 +97,7 @@ export const VideoInstructions = () => {
 						bgColor='#fff'
 						borderRadius='12px'
 						p={{ base: '16px', sm: '20px', md: '24px', lg: '24px' }}
+						mb={{ base: '20px', sm: '0', md: '0', lg: '0' }}
 					>
 						<Text
 							fontWeight={500}
@@ -133,7 +135,22 @@ export const VideoInstructions = () => {
 									color: 'white'
 								}}
 							>
-								Моя первая статья на сайте авито плюс
+								Как добавить изображения
+							</Box>
+							<Box
+								p='8px 16px'
+								bgColor='#fafafa'
+								borderRadius='8px'
+								transition='all 0.1s linear'
+								fontSize='14px'
+								fontWeight='500'
+								cursor='pointer'
+								_hover={{
+									bgColor: 'purple.500',
+									color: 'white'
+								}}
+							>
+								Как удалить, добавить объявление
 							</Box>
 							<Box
 								p='8px 16px'
@@ -178,22 +195,7 @@ export const VideoInstructions = () => {
 									color: 'white'
 								}}
 							>
-								Моя первая статья на сайте авито плюс
-							</Box>
-							<Box
-								p='8px 16px'
-								bgColor='#fafafa'
-								borderRadius='8px'
-								transition='all 0.1s linear'
-								fontSize='14px'
-								fontWeight='500'
-								cursor='pointer'
-								_hover={{
-									bgColor: 'purple.500',
-									color: 'white'
-								}}
-							>
-								Моя первая статья на сайте авито плюс
+								Как удалить, добавить объявление
 							</Box>
 							<Box
 								p='8px 16px'

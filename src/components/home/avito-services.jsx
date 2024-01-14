@@ -9,7 +9,9 @@ import assets from '../../assets';
 import { Link } from 'react-router-dom';
 
 export const AvitoServices = () => (
-	<Box mb='144px'>
+	<Box
+		mb={{ base: '80px', md: '100px', lg: '144px' }}
+	>
 		<Heading
 			fontSize={{ base: '22px', sm: '35px', md: '40px', lg: '48px' }}
 			fontWeight='700'
@@ -73,7 +75,8 @@ export const AvitoServices = () => (
 					bottom={0}
 					height={{ base: '53%', lg: 'auto' }}
 				>
-					<Image src={assets.airpordsGroup} alt='airports group' />
+					<Image src={assets.airpordsGroup} alt='airports group' display={{ base: 'none', lg: 'block' }} />
+					<Image src={assets.airpodsGroupTwo} display={{ base: 'block', lg: 'none' }} />
 				</Box>
 			</Box>
 			<Box

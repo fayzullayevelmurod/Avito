@@ -29,7 +29,7 @@ export const SubscriptionMain = () => {
 					"@media (max-width: 950px)": {
 						gap: '20px',
 						flexDirection: 'column'
-					}
+					},
 				}}
 			>
 				<Flex
@@ -82,6 +82,12 @@ export const SubscriptionMain = () => {
 							_hover={{
 								bgColor: 'purple.600'
 							}}
+							sx={{
+								"@media (max-width: 480px)": {
+									width: '128px',
+									height: '48px'
+								}
+							}}
 						>
 							Пополнить
 						</Button>
@@ -105,17 +111,32 @@ export const SubscriptionMain = () => {
 						}
 					}}
 				>
-					<Link to='#!'>
-						<Button
-							borderColor='blue.500'
-							color='blue.500'
-							variant='outline'
-							fontSize={{ base: '14px', md: '16px', lg: '16px' }}
-						>
-							Подключить Telegram Бот
-							<Image src={assets.telegramIcon} ml='13px' />
-						</Button>
-					</Link>
+					<Box
+						sx={{
+							"@media (max-width:480px)": {
+								width: '100%'
+							}
+						}}
+					>
+						<Link to='#!'>
+							<Button
+								borderColor='blue.500'
+								color='blue.500'
+								variant='outline'
+								fontSize={{ base: '14px', md: '16px', lg: '16px' }}
+								sx={{
+									"@media (max-width:480px)": {
+										display: 'flex',
+										justifyContent: 'space-between',
+										width: '100%'
+									}
+								}}
+							>
+								Подключить Telegram Бот
+								<Image src={assets.telegramIcon} ml='13px' />
+							</Button>
+						</Link>
+					</Box>
 					<Box
 						sx={{
 							"@media (max-width: 550px)": {
@@ -300,6 +321,9 @@ export const SubscriptionMain = () => {
 										pl: '0',
 										borderBottom: '1px solid #E2E8F0',
 										pb: '12px'
+									},
+									"@media (max-width: 480px)": {
+										justifyContent: 'space-between'
 									}
 								}}
 							>
@@ -313,6 +337,11 @@ export const SubscriptionMain = () => {
 									py='2px'
 									borderRadius='2px'
 									fontSize='12px'
+									sx={{
+										"@media (max-width: 480px)": {
+											py: '0'
+										}
+									}}
 								>
 									АКТИВЕН
 								</Box>
@@ -497,6 +526,9 @@ export const SubscriptionMain = () => {
 										pl: '0',
 										borderBottom: '1px solid #E2E8F0',
 										pb: '12px'
+									},
+									"@media (max-width: 480px)": {
+										justifyContent: 'space-between'
 									}
 								}}
 							>
@@ -510,6 +542,11 @@ export const SubscriptionMain = () => {
 									py='2px'
 									borderRadius='2px'
 									fontSize='12px'
+									sx={{
+										"@media (max-width: 480px)": {
+											py: '0'
+										}
+									}}
 								>
 									ОСТАНОВЛЕН
 								</Box>
@@ -693,6 +730,9 @@ export const SubscriptionMain = () => {
 										pl: '0',
 										borderBottom: '1px solid #E2E8F0',
 										pb: '12px'
+									},
+									"@media (max-width: 480px)": {
+										justifyContent: 'space-between'
 									}
 								}}
 							>
@@ -706,6 +746,11 @@ export const SubscriptionMain = () => {
 									py='2px'
 									borderRadius='2px'
 									fontSize='12px'
+									sx={{
+										"@media (max-width: 480px)": {
+											py: '0'
+										}
+									}}
 								>
 									ОСТАНОВЛЕН
 								</Box>
@@ -803,8 +848,8 @@ export const SubscriptionMain = () => {
 				</Flex>
 			</Box>
 			<Flex
-				mt='56px'
-				mb='23px'
+				mt={{ base: '80px', sm: '56px', md: '56px', lg: '56px' }}
+				mb={{ base: '20px', sm: '23px', md: '23px', lg: '23px' }}
 				alignItems='center'
 				justifyContent='space-between'
 			>

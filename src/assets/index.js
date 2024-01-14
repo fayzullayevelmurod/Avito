@@ -32,6 +32,8 @@ import purpleBallon from './media/purple-ballon.png'
 import avitoQrCode from './media/avito-qr-code.svg'
 import closeIcon from './icons/close-icon.svg'
 import menueIcon from './icons/menu-icon.svg'
+import airpodsGroupTwo from './media/airpods-group.png'
+import mediaPurpleBg from './media/media-purple-bg.png'
 
 export default {
 	avitoPlusLogo,
@@ -67,5 +69,7 @@ export default {
 	purpleBallon,
 	avitoQrCode,
 	closeIcon,
-	menueIcon
+	menueIcon,
+	airpodsGroupTwo,
+	mediaPurpleBg
 }
