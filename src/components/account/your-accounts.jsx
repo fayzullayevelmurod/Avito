@@ -360,6 +360,7 @@ export const YourAccounts = () => {
 						<Flex
 							gap='5px'
 							flexWrap='wrap'
+							alignItems='center'
 							sx={{
 								"@media (max-width:480px)": {
 									flexWrap: 'nowrap',

@@ -139,7 +139,7 @@ export const AvitoPlus = () => (
 						},
 						"@media (max-width:480px)": {
 							bgImage: `url(${assets.avitoPlusBg})`,
-							bgSize: '109% 133%',
+							bgSize: '109% 150%',
 							bgPosition: '0px -33px'
 						}
 					}}
