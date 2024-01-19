@@ -6,9 +6,40 @@ import {
 	Button,
 	Image,
 	Grid,
+	Table,
+	Thead,
+	Tbody,
+	Tfoot,
+	Tr,
+	Th,
+	Td,
+	TableCaption,
+	TableContainer,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import assets from '../../assets'
+
+const data = [
+	{ name: 'Мой авито магазин', price: '-2500 руб', date: '21.04.2023' },
+	{ name: 'Мой авито магазин', price: '-2500 руб', date: '21.04.2023' },
+	{ name: 'Мой авито магазин', price: '-2500 руб', date: '21.04.2023' },
+	{ name: 'Мой авито магазин', price: '-2500 руб', date: '21.04.2023' },
+]
+
+const tdStyle = {
+	fontSize: '14px',
+	color: 'gray.700',
+	lineHeight: '16px',
+	fontWeight: '500',
+	pl: '20px',
+	py: '16px',
+	// 						sx:{{
+	// 	"@media (max-width: 815px)": {
+	// 		display: 'block',
+	// 		pl: '0'
+	// 							}
+	// }}
+}
 
 export const SubscriptionMain = () => {
 
@@ -957,571 +988,51 @@ export const SubscriptionMain = () => {
 				</Flex>
 			</Flex>
 
-			<Box
+			<TableContainer
 				mb={{ base: '80px', md: '100px', lg: '108px' }}
 				bgColor='white'
 				borderRadius='12px'
 				p='12px'
-				sx={{
-					"@media (max-width: 815px)": {
-						bgColor: 'transparent',
-						p: '0',
-						borderRadius: '0'
-					}
-				}}
 			>
-				<Flex
-					flexDirection='column'
-					sx={{
-						"@media (max-width: 815px)": {
-							gap: '12px'
-						}
-					}}
+				<Table variant='simple'
+					cellPadding='10px'
+					className='service-table'
 				>
-					<Grid
-						py='12px'
-						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr) )'
-						borderBottom='1px solid #E2E8F0'
-						sx={{
-							"@media (max-width: 815px)": {
-								display: 'none'
-							}
-						}}
-					>
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							pl='20px'
-						>
-							НАИМЕНОВАНИЕ
-						</Text>
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							pl='20px'
-						>
-							ТРАНЗАКЦИЯ
-						</Text>
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							pl='20px'
-						>
-							ДАТА
-						</Text>
-					</Grid>
-
-					<Grid
-						flexDirection='column'
-						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
-						sx={{
-							"@media (max-width: 568px)": {
-								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
-							},
-							"@media (max-width:815px)": {
-								bgColor: 'white',
-								borderRadius: '12px',
-								p: '20px',
-							}
-						}}
-					>
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0'
-								}
-							}}
-						>
-							НАИМЕНОВАНИЕ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									pl: '0'
-								}
-							}}
-						>
-							Мой авито магазин
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0'
-								}
-							}}
-						>
-							ТРАНЗАКЦИЯ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-								}
-							}}
-						>
-							-2500 руб
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									border: 'none',
-									pl: '0'
-								}
-							}}
-						>
-							ДАТА
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									border: 'none',
-								}
-							}}
-						>
-							21.04.2023
-						</Text>
-					</Grid>
-
-					<Grid
-						flexDirection='column'
-						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
-						sx={{
-							"@media (max-width: 568px)": {
-								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
-							},
-							"@media (max-width:815px)": {
-								bgColor: 'white',
-								borderRadius: '12px',
-								p: '20px',
-							}
-						}}
-					>
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0'
-								}
-							}}
-						>
-							НАИМЕНОВАНИЕ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									pl: '0'
-								}
-							}}
-						>
-							Мой авито магазин
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0'
-								}
-							}}
-						>
-							ТРАНЗАКЦИЯ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-								}
-							}}
-						>
-							-2500 руб
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									border: 'none',
-									pl: '0'
-								}
-							}}
-						>
-							ДАТА
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									border: 'none',
-								}
-							}}
-						>
-							21.04.2023
-						</Text>
-					</Grid>
-
-					<Grid
-						flexDirection='column'
-						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
-						sx={{
-							"@media (max-width: 568px)": {
-								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
-							},
-							"@media (max-width:815px)": {
-								bgColor: 'white',
-								borderRadius: '12px',
-								p: '20px',
-							}
-						}}
-					>
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0'
-								}
-							}}
-						>
-							НАИМЕНОВАНИЕ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									pl: '0'
-								}
-							}}
-						>
-							Мой авито магазин
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0'
-								}
-							}}
-						>
-							ТРАНЗАКЦИЯ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-								}
-							}}
-						>
-							-2500 руб
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									border: 'none',
-									pl: '0'
-								}
-							}}
-						>
-							ДАТА
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							borderBottom='1px solid #E2E8F0'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									border: 'none',
-								}
-							}}
-						>
-							21.04.2023
-						</Text>
-					</Grid>
-
-					<Grid
-						flexDirection='column'
-						gridTemplateColumns='repeat( auto-fit, minmax(250px, 1fr))'
-						sx={{
-							"@media (max-width: 568px)": {
-								gridTemplateColumns: 'repeat(2, minmax(145px, 1fr))',
-							},
-							"@media (max-width:815px)": {
-								bgColor: 'white',
-								borderRadius: '12px',
-								p: '20px',
-							}
-						}}
-					>
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0'
-								}
-							}}
-						>
-							НАИМЕНОВАНИЕ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									pl: '0',
-									borderBottom: '1px solid #E2E8F0'
-								}
-							}}
-						>
-							Мой авито магазин
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									pl: '0',
-								}
-							}}
-						>
-							ТРАНЗАКЦИЯ
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									borderBottom: '1px solid #E2E8F0'
-								}
-							}}
-						>
-							-2500 руб
-						</Text>
-
-						<Text
-							fontSize='12px'
-							color='gray.600'
-							lineHeight='16px'
-							fontWeight='700'
-							borderBottom='1px solid #E2E8F0'
-							pl='20px'
-							py='16px'
-							display='none'
-							sx={{
-								"@media (max-width: 815px)": {
-									display: 'block',
-									border: 'none',
-									pl: '0'
-								}
-							}}
-						>
-							ДАТА
-						</Text>
-						<Text
-							fontSize='14px'
-							py='16px'
-							color='gray.700'
-							lineHeight='16px'
-							fontWeight='400'
-							pl='20px'
-							sx={{
-								"@media (max-width: 815px)": {
-									textAlign: 'right',
-									fontWeight: '500',
-									border: 'none',
-								}
-							}}
-						>
-							21.04.2023
-						</Text>
-					</Grid>
-
-				</Flex>
-			</Box>
+					<Thead>
+						<Tr>
+							<Th>НАИМЕНОВАНИЕ</Th>
+							<Th pl='0' >ТРАНЗАКЦИЯ</Th>
+							<Th pl='0'>ДАТА</Th>
+						</Tr>
+					</Thead>
+					<Tbody>
+						{data.map((item, index) => (
+							<Tr
+								key={index}
+							>
+								<Td
+									p='12px 24px !important'
+									style={tdStyle}
+								>
+									{item.name}
+								</Td>
+								<Td
+									fontSize='14px'
+									p='12px 24px'
+								>
+									{item.price}
+								</Td>
+								<Td
+									fontSize='14px'
+									p='12px 24px'
+								>
+									{item.date}
+								</Td>
+							</Tr>
+						))}
+					</Tbody>
+				</Table>
+			</TableContainer>
 		</Box >
 	)
 }

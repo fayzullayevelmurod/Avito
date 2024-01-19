@@ -68,6 +68,10 @@ body {
 	color: #fff;
 }
 
+.service-table tr:last-child td {
+	border: none;
+}
+
 /* media query start */
 @media screen and (max-width: 1300px) {
 	.container {

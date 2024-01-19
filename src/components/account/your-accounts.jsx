@@ -1174,7 +1174,7 @@ export const YourAccounts = () => {
 							width={{ base: '100%', sm: 'auto', md: 'auto', lg: 'auto' }}
 							color='white'
 							mt='24px'
-							height={{ base: '48px', sm: 'auto', md: 'auto', lg: 'auto' }}
+							height={{ base: '48px', sm: '40px', md: '40px', lg: '40px' }}
 							bgColor='orange.500'
 							_hover={{
 								bgColor: 'orange.600',
