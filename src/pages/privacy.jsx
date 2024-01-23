@@ -13,6 +13,7 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
+import assets from "../assets";
 
 const SITE = {
   TEXT: "httpsː//thismywebsite.com",
@@ -606,8 +607,17 @@ export const Privacy = () => {
           сети Интернет по адресу{" "}
           {generateLink(SITE.TEXT + "/privacy", SITE.LINK + "/privacy")}
         </Text>
-        <Footer />
       </div>
+      <Footer />
+      <Box position="fixed" bottom="20px" right="10px" zIndex={100}>
+        <a href="/">
+          <img
+            style={{ width: "100px" }}
+            src={assets.mediaTelegram}
+            alt="telegram"
+          />
+        </a>
+      </Box>
     </>
   );
 };
