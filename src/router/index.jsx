@@ -1,4 +1,4 @@
-import { Policy } from "../components/policy";
+import { Policy } from "../pages/policy";
 import { Account, Home, NotFoundPage, SubscriptionServices, Instructions } from "../pages";
 import { Settings } from "../pages/settings";
 
