@@ -1,3 +1,4 @@
+import { Policy } from "../components/policy";
 import { Account, Home, NotFoundPage, SubscriptionServices, Instructions } from "../pages";
 import { Settings } from "../pages/settings";
 
@@ -22,7 +23,10 @@ const coreRoutes = [
 		path: '/video-instructions',
 		component: Instructions,
 	},
-
+	{
+		path: '/policy',
+		component: Policy,
+	},
 	{
 		path: '*',
 		component: NotFoundPage
