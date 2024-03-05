@@ -29,7 +29,13 @@ export const Ads = () => {
     <Box bg="#FAFAFA">
       <AccountHeader />
       <Box className="container">
-        <Heading as="h5" size="2xl" lineHeight="57.6px" mt={10} mb={8}>
+        <Heading
+          as="h5"
+          size={{ base: "md", md: "xl", lg: "2xl" }}
+          lineHeight={{ base: "29px", lg: "57.6px" }}
+          mt={{ base: "43px", md: 8, lg: 10 }}
+          mb={{ base: "24px", md: 6, lg: 8 }}
+        >
           Объявления
         </Heading>
 

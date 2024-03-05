@@ -80,6 +80,9 @@ body {
   .container {
     max-width: 936px;
   }
+		.lamp__arrow-img {
+			left: 15% !important;
+		}
 }
 
 @media screen and (max-width: 950px) {
