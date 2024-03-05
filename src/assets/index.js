@@ -49,6 +49,7 @@ import avitoAuto5 from './media/avito-auto-5.png'
 import avitoAuto6 from './media/avito-auto-6.png'
 import avitoAuto7 from './media/avito-auto-7.png'
 import arrowButton from './icons/arrow-button.svg'
+import jostik from './icons/jostik-icon.svg'
 
 export default {
 	avitoPlusLogo,
@@ -101,5 +102,6 @@ export default {
 	avitoAuto5,
 	avitoAuto6,
 	avitoAuto7,
-	arrowButton
+	arrowButton,
+	jostik
 };
