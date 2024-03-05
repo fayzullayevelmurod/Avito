@@ -5,6 +5,9 @@ import {
   NotFoundPage,
   SubscriptionServices,
   Instructions,
+  AccountSelection,
+  Ads,
+	Automation,
 } from "../pages";
 import { Settings } from "../pages/settings";
 import { Privacy } from "../pages/privacy";
@@ -41,6 +44,18 @@ const coreRoutes = [
   {
     path: "*",
     component: NotFoundPage,
+  },
+  {
+    path: "account-selection",
+    component: AccountSelection,
+  },
+  {
+    path: "ads",
+    component: Ads,
+  },
+  {
+    path: "automation",
+    component: Automation,
   },
 ];
 

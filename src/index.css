@@ -71,6 +71,9 @@ body {
 .service-table tr:last-child td {
   border: none;
 }
+.not-shadow:focus-visible{
+	box-shadow: none !important;
+}
 
 /* media query start */
 @media screen and (max-width: 1300px) {

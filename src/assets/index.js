@@ -35,43 +35,71 @@ import menueIcon from "./icons/menu-icon.svg";
 import airpodsGroupTwo from "./media/airpods-group.png";
 import mediaPurpleBg from "./media/media-purple-bg.png";
 import mediaTelegram from "./media/telegram.png";
+import lamp from './media/lamp.png'
+import lamp2 from './media/lamp-img.png'
+import lineArrow from './media/line-arrow.png'
+import filterIcon from './icons/filter-icon.svg'
+import changeIcon from './icons/change-icon.svg'
+import nextIcon from './icons/next-icon.svg'
+import avitoAuto1 from './media/avito-auto-1.png'
+import avitoAuto2 from './media/avito-auto-2.png'
+import avitoAuto3 from './media/avito-auto-3.png'
+import avitoAuto4 from './media/avito-auto-4.png'
+import avitoAuto5 from './media/avito-auto-5.png'
+import avitoAuto6 from './media/avito-auto-6.png'
+import avitoAuto7 from './media/avito-auto-7.png'
+import arrowButton from './icons/arrow-button.svg'
 
 export default {
-  avitoPlusLogo,
-  avitoLogo,
-  lightning,
-  upGreenIcon,
-  googleSheets,
-  plusBg,
-  avitoTitleIcon,
-  airpordsGroup,
-  statistics,
-  allFolders,
-  settingsIcon,
-  fullGoogleSheet,
-  avitoReklama,
-  avitoPlusBg,
-  groupRadius,
-  shortReview,
-  fastIcon,
-  lampIcon,
-  fireIcon,
-  raketaIcon,
-  starsGroup,
-  subScripImg,
-  ballon,
-  playIcon,
-  mediaRadiusBg,
-  mediaGoogleSheet,
-  yandexIcon,
-  yandexAvitoIcon,
-  telegramIcon,
-  noteFoundImg,
-  purpleBallon,
-  avitoQrCode,
-  closeIcon,
-  menueIcon,
-  airpodsGroupTwo,
-  mediaPurpleBg,
-  mediaTelegram,
+	avitoPlusLogo,
+	avitoLogo,
+	lightning,
+	upGreenIcon,
+	googleSheets,
+	plusBg,
+	avitoTitleIcon,
+	airpordsGroup,
+	statistics,
+	allFolders,
+	settingsIcon,
+	fullGoogleSheet,
+	avitoReklama,
+	avitoPlusBg,
+	groupRadius,
+	shortReview,
+	fastIcon,
+	lampIcon,
+	fireIcon,
+	raketaIcon,
+	starsGroup,
+	subScripImg,
+	ballon,
+	playIcon,
+	mediaRadiusBg,
+	mediaGoogleSheet,
+	yandexIcon,
+	yandexAvitoIcon,
+	telegramIcon,
+	noteFoundImg,
+	purpleBallon,
+	avitoQrCode,
+	closeIcon,
+	menueIcon,
+	airpodsGroupTwo,
+	mediaPurpleBg,
+	mediaTelegram,
+	lamp,
+	lamp2,
+	lineArrow,
+	filterIcon,
+	changeIcon,
+	nextIcon,
+	avitoAuto1,
+	avitoAuto2,
+	avitoAuto3,
+	avitoAuto4,
+	avitoAuto5,
+	avitoAuto6,
+	avitoAuto7,
+	arrowButton
 };
